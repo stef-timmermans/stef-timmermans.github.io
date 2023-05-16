@@ -1,0 +1,129 @@
+// THIS IS A .TXT REPRESENTATION OF THE PROJECT DIRECTORY
+// STEF-TIMMERMANS.GITHUB.IO PORTFOLIO
+
+.angular {} // gitignore'd
+
+.vscode {
+
+    extensions.json
+    launch.json
+    tasks.json
+
+}
+
+node_modules {} // gitignore'd
+
+src {
+
+    app {
+
+        content {
+
+            footer {
+
+                footer.component.html
+                footer.component.scss
+                footer.component.spec.ts
+                footer.component.ts
+
+            }
+
+            header {
+
+                header.component.html
+                header.component.scss
+                header.component.spec.ts
+                header.component.ts
+
+            }
+
+        }
+
+        pages {
+
+            about-me {
+
+                about-me.component.html
+                about-me.component.scss
+                about-me.component.spec.ts
+                about-me.component.ts
+
+            }
+
+            contact {
+
+                contact.component.html
+                contact.component.scss
+                contact.component.spec.ts
+                contact.component.ts
+
+            }
+
+            home {
+
+                home.component.html
+                home.component.scss
+                home.component.spec.ts
+                home.component.ts
+
+            }
+
+            not-found {
+
+                not-found.component.html
+                not-found.component.scss
+                not-found.component.spec.ts
+                not-found.component.ts
+
+            }
+
+            projects {
+
+                projects.component.html
+                projects.component.scss
+                projects.component.spec.ts
+                projects.component.ts
+
+            }
+
+        }
+
+        services {
+
+            email-service.service.spec.ts
+            email-service.service.ts
+
+        }
+
+        app-routing.module.ts
+        app.component.html
+        app.component.scss
+        app.component.spec.ts
+        app.component.ts
+        app.module.ts
+
+    }
+
+    assets {
+
+        .gitkeep
+
+    }
+
+    favicon.ico
+    index.html
+    main.ts
+    styles.scss
+
+}
+
+.editorconfig
+.gitignore
+angular.json
+DIR_PATH.txt
+package-lock.json
+package.json
+README.md
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
