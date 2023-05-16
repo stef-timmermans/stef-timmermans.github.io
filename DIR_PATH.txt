@@ -121,6 +121,7 @@ src {
 .gitignore
 angular.json
 DIR_PATH.txt
+LICENSE
 package-lock.json
 package.json
 README.md
