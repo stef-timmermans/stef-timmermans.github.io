@@ -11,6 +11,8 @@
 
 }
 
+docs {} // production data updated with `ng build --configuration production`
+
 node_modules {} // gitignore'd
 
 src {
