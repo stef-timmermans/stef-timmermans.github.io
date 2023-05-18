@@ -10,7 +10,6 @@ export class ThemeService {
 
   constructor() { 
     this.setTheme(this.getTheme());
-    console.log('Got theme!');
   }
 
   setTheme(theme: string): void {
@@ -24,9 +23,7 @@ export class ThemeService {
     document.body.classList.add(theme);
 
     // update theme in local storage
-    localStorage.setItem(this.THEME_KEY, theme);
-    
-    console.log('Set theme!');
+    localStorage.setItem(this.THEME_KEY, theme);    
   }
 
   toggleTheme(): void {
@@ -35,7 +32,6 @@ export class ThemeService {
     } else {
       this.setTheme(this.DARK_THEME);
     }
-    console.log('Toggled theme!');
   }
 
   getTheme(): string {
