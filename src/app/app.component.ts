@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'stef-timmermans.github.io';
+  constructor(private themeService: ThemeService) {
+    this.themeService.setTheme(this.themeService.getTheme());
+  }
 }

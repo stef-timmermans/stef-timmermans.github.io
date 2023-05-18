@@ -41,6 +41,19 @@ src {
 
         }
 
+        elements {
+
+            theme-switch {
+
+                theme-switch.component.html
+                theme-switch.component.scss
+                theme-switch.component.spec.ts
+                theme-switch.component.ts
+
+            }
+
+        }
+
         pages {
 
             about-me {

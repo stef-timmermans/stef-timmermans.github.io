@@ -13,6 +13,7 @@ import { FooterComponent } from './content/footer/footer.component';
 
 import { EmailService } from './services/email/email.service';
 import { ThemeService } from './services/theme/theme.service';
+import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ThemeService } from './services/theme/theme.service';
     ContactComponent,
     NotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ThemeSwitchComponent
   ],
   imports: [
     BrowserModule,
