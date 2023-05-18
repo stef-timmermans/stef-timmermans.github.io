@@ -11,6 +11,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './content/header/header.component';
 import { FooterComponent } from './content/footer/footer.component';
 
+import { EmailService } from './services/email/email.service';
+import { ThemeService } from './services/theme/theme.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,7 @@ import { FooterComponent } from './content/footer/footer.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmailService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
