@@ -41,6 +41,19 @@ src {
 
         }
 
+        elements {
+
+            theme-switch {
+
+                theme-switch.component.html
+                theme-switch.component.scss
+                theme-switch.component.spec.ts
+                theme-switch.component.ts
+
+            }
+
+        }
+
         pages {
 
             about-me {
@@ -92,8 +105,19 @@ src {
 
         services {
 
-            email-service.service.spec.ts
-            email-service.service.ts
+            email {
+
+                email.service.spec.ts
+                email.service.ts
+
+            }
+
+            theme {
+
+                theme.service.spec.ts
+                theme.service.ts
+
+            }
 
         }
 

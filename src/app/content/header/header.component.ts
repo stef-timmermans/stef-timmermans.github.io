@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(private themeService: ThemeService) { }
+
+  switchTheme(): void {
+    this.themeService.toggleTheme();
+  }
 }

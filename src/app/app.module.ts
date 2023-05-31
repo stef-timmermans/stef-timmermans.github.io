@@ -11,6 +11,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './content/header/header.component';
 import { FooterComponent } from './content/footer/footer.component';
 
+import { EmailService } from './services/email/email.service';
+import { ThemeService } from './services/theme/theme.service';
+import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +24,14 @@ import { FooterComponent } from './content/footer/footer.component';
     ContactComponent,
     NotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ThemeSwitchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmailService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

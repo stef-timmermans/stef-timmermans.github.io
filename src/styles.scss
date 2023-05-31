@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Assign the colors for light and dark mode themes */
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+  }
+  
+  .dark {
+    --bg-color: #000;
+    --text-color: #fff;
+  }
