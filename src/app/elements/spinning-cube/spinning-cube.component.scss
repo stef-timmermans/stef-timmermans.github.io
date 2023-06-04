@@ -1,0 +1,49 @@
+@use 'sass:math';
+
+$cube-size: 150px;
+$half-cube-size: math.div($cube-size, 2);
+
+.cube {
+  position: relative;
+  width: $cube-size;
+  height: $cube-size;
+  transform-style: preserve-3d;
+  animation: spin 5s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: $cube-size;
+  height: $cube-size;
+  background: var(--cube-color);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.front {
+  transform: translateZ($half-cube-size);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ($half-cube-size);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ($half-cube-size);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ($half-cube-size);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ($half-cube-size);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ($half-cube-size);
+}
+
+@keyframes spin {
+  0% { transform: rotateX(-45deg) rotateY(0deg); }
+  100% { transform: rotateX(-45deg) rotateY(1turn); }
+}

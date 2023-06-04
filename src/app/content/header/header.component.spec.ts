@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeaderComponent } from './header.component';
+import { ThemeSwitchComponent } from '../../elements/theme-switch/theme-switch.component';
+import { ThemeService } from '../../services/theme/theme.service';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -8,7 +9,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent]
+      declarations: [HeaderComponent, ThemeSwitchComponent],
+      providers: [ThemeService]  // provide the ThemeService here
     });
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

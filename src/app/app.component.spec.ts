@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './content/header/header.component';
 import { FooterComponent } from './content/footer/footer.component';
+import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';  // Import this
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -12,7 +13,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AppComponent, HeaderComponent, FooterComponent]
+      declarations: [AppComponent, HeaderComponent, FooterComponent, ThemeSwitchComponent]  // Declare this
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

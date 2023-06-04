@@ -1,10 +1,12 @@
 /* Assign the colors for light and dark mode themes */
 :root {
-    --bg-color: #fff;
-    --text-color: #000;
-  }
-  
-  .dark {
-    --bg-color: #000;
-    --text-color: #fff;
-  }
+  --bg-color: #fff;
+  --text-color: #000;
+  --cube-color: #3498db; /* Default cube color */
+}
+
+.dark {
+  --bg-color: #000;
+  --text-color: #fff;
+  --cube-color: #1abc9c; /* Cube color in dark mode */
+}
