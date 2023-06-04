@@ -8,4 +8,12 @@ import { ThemeService } from '../../services/theme/theme.service';
 })
 export class ThemeSwitchComponent {
   constructor(public themeService: ThemeService) { }
+
+  switchTheme(): void {
+    this.themeService.toggleTheme();
+  }
+
+  getButtonText(): string {
+    return this.themeService.getTheme() === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
 }

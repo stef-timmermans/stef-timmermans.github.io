@@ -9,8 +9,4 @@ import { ThemeService } from '../../services/theme/theme.service';
 export class HeaderComponent {
 
   constructor(private themeService: ThemeService) { }
-
-  switchTheme(): void {
-    this.themeService.toggleTheme();
-  }
 }
