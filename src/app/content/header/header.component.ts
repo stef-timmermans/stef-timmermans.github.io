@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +7,4 @@ import { ThemeService } from '../../services/theme/theme.service';
 })
 export class HeaderComponent {
 
-  constructor(private themeService: ThemeService) { }
 }
