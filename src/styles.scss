@@ -1,14 +1,29 @@
 /* Assign the colors for light and dark mode themes */
 :root {
-  --bg-color: #fafafa; /* Light gray */
+  --bg-color: #fafafa; /* Soft white */
   --text-color: #333333; /* Dark gray */
-  --cube-color: #0088cc; /* A modern, bright blue */
-  --secondary-color: #cccccc; /* Light gray for secondary text */
+  --cube-color: #1e88e5; /* Bright blue */
+  --secondary-color: #757575; /* Mid gray for secondary text */
+  --primary-color: #1e88e5; /* Primary color */
+  --accent-color: #ff4081; /* Accent color */
 }
 
 .dark {
-  --bg-color: #282828; /* Almost black for a softer look */
-  --text-color: #eeeeee; /* Almost white for a softer look */
-  --cube-color: #0088cc; /* Cube color keeps the same in dark mode */
-  --secondary-color: #999999; /* Darker gray for secondary text in dark mode */
+  --bg-color: #2b2b2b; /* Darker gray */
+  --text-color: #eeeeee; /* Soft white */
+  --cube-color: #1e88e5; /* Cube color keeps the same in dark mode */
+  --secondary-color: #bdbdbd; /* Lighter gray for secondary text in dark mode */
+  --primary-color: #90caf9; /* Primary color */
+  --accent-color: #ff80ab; /* Accent color */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+app-header, app-footer {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
 }

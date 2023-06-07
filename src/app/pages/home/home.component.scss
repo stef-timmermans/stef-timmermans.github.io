@@ -1,18 +1,36 @@
 .home-content {
   background-color: var(--bg-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.top-left {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.bottom-left {
+  text-align: left;
+}
+
+.arrow {
+  margin: 0 0.5em;
 }
 
 .cube-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.arrow {
-  margin: 0 0.5em; /* change this as per your need */
-}
-
-.cube-container i {
-  margin: 0 2rem; /* adjust this as needed */
+  margin-top: 1rem;
 }
