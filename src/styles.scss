@@ -1,12 +1,14 @@
 /* Assign the colors for light and dark mode themes */
 :root {
-  --bg-color: #fff;
-  --text-color: #000;
-  --cube-color: #3498db; /* Default cube color */
+  --bg-color: #fafafa; /* Light gray */
+  --text-color: #333333; /* Dark gray */
+  --cube-color: #0088cc; /* A modern, bright blue */
+  --secondary-color: #cccccc; /* Light gray for secondary text */
 }
 
 .dark {
-  --bg-color: #000;
-  --text-color: #fff;
-  --cube-color: #1abc9c; /* Cube color in dark mode */
+  --bg-color: #282828; /* Almost black for a softer look */
+  --text-color: #eeeeee; /* Almost white for a softer look */
+  --cube-color: #0088cc; /* Cube color keeps the same in dark mode */
+  --secondary-color: #999999; /* Darker gray for secondary text in dark mode */
 }

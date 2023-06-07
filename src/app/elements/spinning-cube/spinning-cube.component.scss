@@ -16,7 +16,8 @@ $half-cube-size: math.div($cube-size, 2);
   width: $cube-size;
   height: $cube-size;
   background: var(--cube-color);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border:0px solid black; // Adjust border
+  box-shadow: 0 0 0px rgba(0,0,0,0.3); // Adjust shadow
 }
 
 .front {
