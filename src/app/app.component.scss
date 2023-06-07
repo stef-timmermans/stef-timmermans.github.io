@@ -1,19 +1,18 @@
 html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .router-outlet {
-    flex: 1;
-  }
-  
-  .force-footer-to-bottom {
-    flex-shrink: 0;
-  }
-  
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+app-footer {
+  flex-shrink: 0;
+}

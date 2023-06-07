@@ -10,7 +10,6 @@
     display: flex;
     justify-content: center;
     gap: 20px; // Adjust gap for links
-    text-decoration: underline;
 }
 
 .nav-links .link {
@@ -20,16 +19,32 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px; // Adjust thickness of the underline here
+      background-color: var(--hd-ft-text-color);
+      transition: background-color 0.2s;
+    }
 
     &:hover {
       color: var(--hovered-color);
+
+      &::after {
+        background-color: var(--hovered-color);
+      }
     }
-    
+
     transition: color 0.2s;
 }
 
 .spinning-cube {
-    padding-right: 1rem;
+    padding-right: 2rem;
 }
 
 .theme-switcher {
