@@ -1,7 +1,8 @@
 /* Assign the colors for light and dark mode themes */
 :root {
   --bg-color: #fafafa; /* Soft white */
-  --hd-ft-color: #757575; /* Mid gray */
+  --hd-ft-color: #d6d6d6; /* Very light gray */
+  --hd-ft-text-color: #000000; /* Pure black text */
   --text-color: #333333; /* Dark gray */
   --cube-color: #333333; /* Dark gray cube */
   --secondary-color: #757575; /* Mid gray for secondary text */
@@ -11,8 +12,9 @@
 }
 
 .dark {
-  --bg-color: #2b2b2b; /* Darker gray */
+  --bg-color: #1e1e1e; /* Darker gray */
   --hd-ft-color: #525252; /* Light gray */
+  --hd-ft-text-color: #eeeeee; /* Soft white */
   --text-color: #eeeeee; /* Soft white */
   --cube-color: #eeeeee; /* White cube */
   --secondary-color: #bdbdbd; /* Lighter gray for secondary text in dark mode */
