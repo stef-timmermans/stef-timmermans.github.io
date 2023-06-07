@@ -1,0 +1,36 @@
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10% 1rem 2%;
+    background-color: var(--hd-ft-color);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; // Adjust gap for links
+}
+
+.nav-links .link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem; // Adjust text size for links
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      color: var(--hovered-color);
+    }
+    
+    transition: color 0.2s;
+}
+
+.spinning-cube {
+    padding-right: 1rem;
+}
+
+.theme-switcher {
+    margin-left: auto;
+}

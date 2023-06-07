@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-$cube-size: 150px;
+$cube-size: 40px;
 $half-cube-size: math.div($cube-size, 2);
 
 .cube {
