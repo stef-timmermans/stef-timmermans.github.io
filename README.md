@@ -4,6 +4,10 @@ This is the repository for my portfolio website. It's built using Angular and sh
 
 <br>
 
+<img src="./src/assets/home-page.png">
+
+<br>
+
 # Pages
 
 1. **Home**: Here you'll find a brief introduction about me and what I do.
