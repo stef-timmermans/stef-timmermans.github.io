@@ -43,6 +43,15 @@ src {
 
         elements {
 
+            spinning-cube {
+
+                spinning-cube.component.html
+                spinning-cube.component.scss
+                spinning-cube.component.spec.ts
+                spinning-cube.component.ts
+
+            }
+
             theme-switch {
 
                 theme-switch.component.html

@@ -5,11 +5,13 @@
     justify-content: center;
     color: var(--hd-ft-text-color);
     background-color: var(--hd-ft-color);
-    padding: 1rem; /* Padding to avoid collision */
+    padding: 0.5rem 0.5rem 0; /* No padding-bottom */
 }
 
 .author {
-    margin-bottom: 0.5rem; /* Padding between author and repo */
+    /* No margins */
+    margin-bottom: 0rem;
+    margin-top: 0.5rem;
 }
 
 .repo {
@@ -20,4 +22,5 @@
     }
 
     transition: color 0.2s;
+    margin-bottom: 0; /* No margin-bottom */
 }

@@ -16,8 +16,8 @@ import { FooterComponent } from './content/footer/footer.component';
 import { EmailService } from './services/email/email.service';
 import { ThemeService } from './services/theme/theme.service';
 
-import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
 import { SpinningCubeComponent } from './elements/spinning-cube/spinning-cube.component';
+import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,8 @@ import { SpinningCubeComponent } from './elements/spinning-cube/spinning-cube.co
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    ThemeSwitchComponent,
-    SpinningCubeComponent
+    SpinningCubeComponent,
+    ThemeSwitchComponent
   ],
   imports: [
     BrowserModule,

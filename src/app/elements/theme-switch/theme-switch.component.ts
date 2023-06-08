@@ -18,6 +18,6 @@ export class ThemeSwitchComponent {
   }
 
   getButtonText(): string {
-    return this.themeService.getTheme() === 'dark' ? 'Light Mode ' : 'Dark Mode ';
+    return this.themeService.getTheme() === 'dark' ? 'Light Mode' : 'Dark Mode';
   }
 }

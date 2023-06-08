@@ -1,5 +1,9 @@
 .btn-primary {
-    background-color: var(--bg-color);
-    border-color: var(--bg-color);
-    color: var(--hd-ft-text-color);
+    background-color: var(--bg-color) !important;
+    border-color: var(--bg-color) !important;
+    color: var(--hd-ft-text-color) !important;
+}
+
+.icon-text {
+    padding-right: 0.5rem;
 }

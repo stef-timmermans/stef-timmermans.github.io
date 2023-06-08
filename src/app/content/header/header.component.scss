@@ -2,14 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 10% 1rem 2%;
+    padding: 1.5rem 10% 1.5rem 2%;
     background-color: var(--hd-ft-color);
 }
 
 .nav-links {
+    padding-left: 1rem;
     display: flex;
     justify-content: center;
-    gap: 20px; // Adjust gap for links
+    gap: 30px; // Adjust gap for links
 }
 
 .nav-links .link {

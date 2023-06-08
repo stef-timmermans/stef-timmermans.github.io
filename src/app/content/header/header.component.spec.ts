@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
+import { SpinningCubeComponent } from '../../elements/spinning-cube/spinning-cube.component';
 import { ThemeSwitchComponent } from '../../elements/theme-switch/theme-switch.component';
 import { ThemeService } from '../../services/theme/theme.service';
 
@@ -9,7 +10,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent, ThemeSwitchComponent],
+      declarations: [HeaderComponent, SpinningCubeComponent, ThemeSwitchComponent],
       providers: [ThemeService]  // provide the ThemeService here
     });
     fixture = TestBed.createComponent(HeaderComponent);
