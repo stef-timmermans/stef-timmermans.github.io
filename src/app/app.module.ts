@@ -16,7 +16,6 @@ import { FooterComponent } from './content/footer/footer.component';
 import { EmailService } from './services/email/email.service';
 import { ThemeService } from './services/theme/theme.service';
 
-import { RotatingCubeComponent } from './elements/rotating-cube/rotating-cube.component';
 import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
 
 @NgModule({
@@ -29,7 +28,6 @@ import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.compo
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    RotatingCubeComponent,
     ThemeSwitchComponent
   ],
   imports: [
