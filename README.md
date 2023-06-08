@@ -30,3 +30,9 @@ To run this project locally:
 2. Install dependencies: `npm install`
 3. Start the server: `ng serve`
 4. Open a browser and navigate to `http://localhost:4200/`
+
+<br>
+
+# License Information
+
+This project is licensed under the MIT license. It is partially built using free and open-source software. For more information see `LICENSE` and `NOTICE` in the root directory.
