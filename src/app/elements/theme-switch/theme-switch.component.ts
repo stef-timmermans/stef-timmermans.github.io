@@ -13,7 +13,11 @@ export class ThemeSwitchComponent {
     this.themeService.toggleTheme();
   }
 
+  getButtonIcon(): string {
+    return this.themeService.getTheme() === 'dark' ? 'bi-sun-fill' : 'bi-moon-fill';
+  }
+
   getButtonText(): string {
-    return this.themeService.getTheme() === 'dark' ? 'Light Mode' : 'Dark Mode';
+    return this.themeService.getTheme() === 'dark' ? 'Light Mode ' : 'Dark Mode ';
   }
 }

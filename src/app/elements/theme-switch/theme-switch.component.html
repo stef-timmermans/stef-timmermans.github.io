@@ -1,1 +1,4 @@
-<button (click)="switchTheme()">{{getButtonText()}}</button>
+<button (click)="switchTheme()" class="btn btn-primary">
+    <span class="icon-text">{{getButtonText()}}</span>
+    <i class="bi" [ngClass]="getButtonIcon()"></i>
+</button>
