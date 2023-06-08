@@ -4,15 +4,19 @@ This is the repository for my portfolio website. It's built using Angular and sh
 
 <br>
 
+<img src="./src/assets/home-page.png">
+
+<br>
+
 # Pages
 
-1. **Home**: Here you'll find a brief introduction about me and what I do.
+1. **Home:** Here you'll find a brief introduction about me and what I do.
 
-2. **Projects**: This page showcases some of the projects that I've worked on. Each project includes a brief description, the tech stack I used, and a link to the documentation, if applicable.
+2. **Projects:** This page showcases some of the projects that I've worked on. Each project includes a brief description, the tech stack I used, and a link to the documentation, if applicable.
 
-3. **About Me**: On this page, you'll find more information about me, my skills, and my experience in the tech industry.
+3. **About Me:** On this page, you'll find more information about me, my skills, and my experience in the tech industry.
 
-4. **Contact**: If you're interested in my work and would like to get in touch, head over to the contact page. There's a form you can fill out to send me an email directly.
+4. **Resume and Contact:** If you're interested in my work and would like to get in touch, head over to the contact page. There's a form you can fill out to send me an email directly. You can also find a Google Drive link to my current resume.
 
 <br>
 
@@ -30,3 +34,9 @@ To run this project locally:
 2. Install dependencies: `npm install`
 3. Start the server: `ng serve`
 4. Open a browser and navigate to `http://localhost:4200/`
+
+<br>
+
+# License Information
+
+This project is licensed under the MIT license. It is partially built using free and open-source software. For more information see `LICENSE` and `NOTICE` in the root directory.

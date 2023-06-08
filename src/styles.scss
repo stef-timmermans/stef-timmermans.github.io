@@ -1,12 +1,38 @@
 /* Assign the colors for light and dark mode themes */
 :root {
-  --bg-color: #fff;
-  --text-color: #000;
-  --cube-color: #3498db; /* Default cube color */
+  --bg-color: #fafafa; /* Soft white */
+  --hd-ft-color: #d6d6d6; /* Very light gray */
+  --hd-ft-text-color: #000000; /* Pure black text */
+  --text-color: #333333; /* Dark gray */
+  --cube-color: #333333; /* Dark gray cube */
+  --secondary-color: #757575; /* Mid gray for secondary text */
+  --primary-color: #1e88e5; /* Primary color */
+  --accent-color: #ff4081; /* Accent color */
+  --hovered-color: #1e88e5; /* Blue for hovered links */
 }
 
 .dark {
-  --bg-color: #000;
-  --text-color: #fff;
-  --cube-color: #1abc9c; /* Cube color in dark mode */
+  --bg-color: #1e1e1e; /* Darker gray */
+  --hd-ft-color: #525252; /* Light gray */
+  --hd-ft-text-color: #eeeeee; /* Soft white */
+  --text-color: #eeeeee; /* Soft white */
+  --cube-color: #eeeeee; /* White cube */
+  --secondary-color: #bdbdbd; /* Lighter gray for secondary text in dark mode */
+  --primary-color: #90caf9; /* Primary color */
+  --accent-color: #ff80ab; /* Accent color */
+  --hovered-color: #787878; /* Gray for hovered links */
 }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+app-header, app-footer {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

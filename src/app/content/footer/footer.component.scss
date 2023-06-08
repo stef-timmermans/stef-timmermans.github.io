@@ -1,0 +1,26 @@
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--hd-ft-text-color);
+    background-color: var(--hd-ft-color);
+    padding: 0.5rem 0.5rem 0; /* No padding-bottom */
+}
+
+.author {
+    /* No margins */
+    margin-bottom: 0rem;
+    margin-top: 0.5rem;
+}
+
+.repo {
+    color: var(--hd-ft-text-color);
+
+    &:hover {
+        color: var(--hovered-color);
+    }
+
+    transition: color 0.2s;
+    margin-bottom: 0; /* No margin-bottom */
+}

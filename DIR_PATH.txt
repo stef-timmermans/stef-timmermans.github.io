@@ -136,7 +136,7 @@ src {
 
     }
 
-    favicon.ico
+    favicon.png
     index.html
     main.ts
     styles.scss

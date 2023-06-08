@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +17,6 @@ import { EmailService } from './services/email/email.service';
 import { ThemeService } from './services/theme/theme.service';
 
 import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
-import { SpinningCubeComponent } from './elements/spinning-cube/spinning-cube.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { SpinningCubeComponent } from './elements/spinning-cube/spinning-cube.co
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    ThemeSwitchComponent,
-    SpinningCubeComponent
+    ThemeSwitchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTooltipModule
   ],
   providers: [EmailService, ThemeService],
   bootstrap: [AppComponent]

@@ -1,0 +1,105 @@
+@use 'sass:math';
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10% 1.5rem 2%;
+    background-color: var(--hd-ft-color);
+}
+
+.nav-links {
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px; // Adjust gap for links
+}
+
+.nav-links .link {
+    color: var(--hd-ft-text-color);
+    text-decoration: none;
+    font-size: 1.5rem; // Adjust text size for links
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px; // Adjust thickness of the underline here
+      background-color: var(--hd-ft-text-color);
+      transition: background-color 0.2s;
+    }
+
+    &:hover {
+      color: var(--hovered-color);
+
+      &::after {
+        background-color: var(--hovered-color);
+      }
+    }
+
+    transition: color 0.2s;
+}
+
+$cube-size: 40px;
+$half-cube-size: math.div($cube-size, 2);
+
+.cube {
+  position: relative;
+  width: $cube-size;
+  height: $cube-size;
+  transform-style: preserve-3d;
+  animation: spin 5s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: $cube-size;
+  height: $cube-size;
+  background: var(--cube-color);
+  border:0px solid black; // Adjust border
+  box-shadow: 0 0 0px rgba(0,0,0,0.3); // Adjust shadow
+}
+
+.front {
+  transform: translateZ($half-cube-size);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ($half-cube-size);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ($half-cube-size);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ($half-cube-size);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ($half-cube-size);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ($half-cube-size);
+}
+
+@keyframes spin {
+  0% { transform: rotateX(-45deg) rotateY(0deg); }
+  100% { transform: rotateX(-45deg) rotateY(1turn); }
+}
+
+
+.spinning-cube {
+    padding-right: 2rem;
+}
+
+.theme-switcher {
+    margin-left: auto;
+}
