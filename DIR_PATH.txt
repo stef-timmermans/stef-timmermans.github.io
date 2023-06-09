@@ -52,6 +52,15 @@ src {
 
             }
 
+            project {
+
+                project.component.html
+                project.component.scss
+                project.component.spec.ts
+                project.component.ts
+
+            }
+
         }
 
         pages {
