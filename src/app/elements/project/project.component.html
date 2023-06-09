@@ -1,1 +1,19 @@
-<p></p>
+<div>
+    <!-- Displays the project name -->
+    <h2>
+        {{ name }}
+    </h2>
+    
+    <!-- Displays the project description -->
+    <p>
+        {{ description }}
+    </p>
+    
+    <!-- Displays the project tags -->
+    <p>
+        Tags: {{ tags.join(', ') }}
+    </p>
+    
+    <!-- Displays the project image -->
+    <img [src]="image" alt="Image of {{ name }}">
+</div>
