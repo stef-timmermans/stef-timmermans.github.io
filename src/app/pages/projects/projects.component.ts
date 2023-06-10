@@ -50,10 +50,11 @@ export class ProjectsComponent {
           Cuttlefish is a simple, yet powerful, web-based project management tool.
           It allows for the creation of projects, tasks, and sprints, as well as
           creation for just-in-time Gantt charts. Cuttlefish was completed as a
-          part of the Oregon State University 2022-2023 Capstone program.
+          part of the Oregon State University 2023 College of Engineering Capstone
+          program.
         `,
 
-      tags: ['Angular', 'TypeScript', `.NET`, 'C#', 'SQL', 'Azure',],
+      tags: ['Angular', 'TypeScript', 'C#', 'SQL', '.NET', 'Azure'],
       repository: 'https://github.com/NathanJesudason/Cuttlefish',
       image: ''
     }
@@ -61,5 +62,8 @@ export class ProjectsComponent {
 
   constructor(private titleService: Title ) {
     this.titleService.setTitle('Projects');
+
+    // Allow for easy appending for list of projects
+    this.projects = this.projects.reverse();
   }
 }

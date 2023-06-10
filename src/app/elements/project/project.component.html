@@ -1,8 +1,8 @@
-<div>
+<div class="project-container">
     <!-- Displays the project name -->
-    <h2>
+    <h3>
         {{ name }}
-    </h2>
+    </h3>
     
     <!-- Displays the project description -->
     <p>
@@ -10,10 +10,10 @@
     </p>
     
     <!-- Displays the project tags -->
-    <p>
-        Tags: {{ tags.join(', ') }}
-    </p>
-    
+    <div class="tag-list" *ngFor="let tag of tags">
+        {{ tag }}
+    </div>
+
     <!-- Displays the project image -->
     <img [src]="image" alt="Image of {{ name }}">
 </div>
