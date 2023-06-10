@@ -1,37 +1,48 @@
 .project-container {
     display: grid;
     grid-template-areas:
-      'name image'
-      'description image'
-      'description tags';
+      'name         image'
+      'description  image'
+      'tags         image';
     grid-template-columns: 1fr 1fr;
     border: 1px var(--text-color) solid;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    gap: 20px;
+    gap: 10px;
 }
-  
+
 .project-name {
     grid-area: name;
+
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--hovered-color);
+        }
+
+        transition: color 0.2s;
+    }
 }
-  
+
 .project-description {
     grid-area: description;
 }
-  
+
 .tag-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-  
+
 .tag {
     border: 1px var(--text-color) solid;
     border-radius: 10px;
     padding: 5px;
 }
-  
+
 .project-image {
     grid-area: image;
     width: 100%;

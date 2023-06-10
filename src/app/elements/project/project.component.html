@@ -1,7 +1,11 @@
 <div class="project-container">
-    <!-- Displays the project name -->
+    <!-- Displays the project name as a hyperlink to the repository -->
     <div class="project-name">
-        <h3>{{ name }}</h3>
+        <h3>
+            <a [href]="repository" target="_blank">{{ name }}
+                <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+        </h3>
     </div>
     
     <!-- Displays the project description -->

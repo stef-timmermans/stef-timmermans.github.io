@@ -11,6 +11,7 @@ export class ProjectComponent {
   @Input() name!: string;
   @Input() description!: string;
   @Input() tags!: string[];
+  @Input() repository!: string;
   @Input() image!: string;
 
 }
