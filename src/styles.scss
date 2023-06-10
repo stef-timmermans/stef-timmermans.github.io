@@ -34,5 +34,24 @@ app-header, app-footer {
   color: var(--bg-color);
 }
 
+/* Set styles for the scrollbar */
+::-webkit-scrollbar {
+  width: 0.70rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hd-ft-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+}
+
+/* Set styles for the scrollbar in Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color) var(--hd-ft-color);
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
