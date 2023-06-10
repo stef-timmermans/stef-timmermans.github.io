@@ -1,3 +1,39 @@
 .project-container {
-    padding-bottom: 2rem;
+    display: grid;
+    grid-template-areas:
+      'name image'
+      'description image'
+      'description tags';
+    grid-template-columns: 1fr 1fr;
+    border: 1px var(--text-color) solid;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+  
+.project-name {
+    grid-area: name;
+}
+  
+.project-description {
+    grid-area: description;
+}
+  
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+  
+.tag {
+    border: 1px var(--text-color) solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+  
+.project-image {
+    grid-area: image;
+    width: 100%;
+    height: auto;
 }
