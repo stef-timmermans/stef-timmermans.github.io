@@ -142,6 +142,9 @@ src {
     assets {
 
         .gitkeep
+        banking-database-project.png
+        cuttlefish.png
+        home-page.png
 
     }
 
