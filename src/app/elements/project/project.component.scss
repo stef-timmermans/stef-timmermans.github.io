@@ -15,6 +15,7 @@
 
 .project-name {
     grid-area: name;
+    align-self: start;
 
     a {
         color: var(--text-color);
@@ -30,6 +31,8 @@
 
 .project-description {
     grid-area: description;
+    align-self: start;
+    padding-top: 20px;
 }
 
 .tag-list {
@@ -37,6 +40,8 @@
     flex-wrap: wrap;
     gap: 10px;
     grid-area: tags;
+    align-self: end;
+    justify-content: flex-start;
 }
 
 .tag {
@@ -45,13 +50,12 @@
     padding: 5px;
     display: inline-flex;
     align-items: center;
-    justify-content: center; // horizontally center text
+    justify-content: center;
     line-height: 1;
-    min-width: 140px; // Adjust this to the minimum size you want
-    height: 30px; // Adjust this based on your design
-    text-align: center; // Ensure the text is centered
+    min-width: 100px;
+    height: 30px;
+    text-align: center;
 }
-
 
 .project-image {
     grid-area: image;
