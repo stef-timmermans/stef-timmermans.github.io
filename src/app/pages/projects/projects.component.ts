@@ -21,7 +21,7 @@ export class ProjectsComponent {
       
       tags: ['JavaScipt', 'Handlebars', 'SQL'],
       repository: 'https://github.com/OvercastSolutions/banking-database-project',
-      image: 'src/assets/banking-database-project.png'
+      image: 'assets/banking-database-project.png'
     },
 
     {
@@ -38,7 +38,7 @@ export class ProjectsComponent {
         
       tags: ['Angular', 'TypeScript', 'GitHub Pages'],
       repository: 'https://github.com/stef-timmermans/stef-timmermans.github.io',
-      image: 'src/assets/home-page.png'
+      image: 'assets/home-page.png'
     },
 
     {
@@ -56,7 +56,7 @@ export class ProjectsComponent {
 
       tags: ['Angular', 'TypeScript', 'C#', 'SQL', '.NET', 'Azure'],
       repository: 'https://github.com/NathanJesudason/Cuttlefish',
-      image: 'src/assets/cuttlefish.png'
+      image: 'assets/cuttlefish.png'
     }
   ]
 
