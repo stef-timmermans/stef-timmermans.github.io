@@ -1,3 +1,12 @@
+/*
+* Folder: src/app/services/theme
+* Component: theme
+*     The theme service is used to manage the theme of the
+*   website. It is used to set the theme, toggle the theme,
+*   and get the current theme. The theme is stored in local
+*   storage so that it persists between page loads.
+*/
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -16,14 +25,18 @@ export class ThemeService {
     // first, remove the old theme class if any
     const currentTheme = this.getTheme();
     if (currentTheme) {
-      document.body.classList.remove(currentTheme);
+        document.body.classList.remove(currentTheme);
     }
     
     // add the new theme class
     document.body.classList.add(theme);
 
     // update theme in local storage
-    localStorage.setItem(this.THEME_KEY, theme);    
+    try {
+        localStorage.setItem(this.THEME_KEY, theme);
+    } catch (e) {
+        console.error('Unable to save theme in Local Storage: ', e);
+    }
   }
 
   toggleTheme(): void {
@@ -35,6 +48,12 @@ export class ThemeService {
   }
 
   getTheme(): string {
-    return localStorage.getItem(this.THEME_KEY) || this.LIGHT_THEME;
+    let theme = this.LIGHT_THEME;
+    try {
+        theme = localStorage.getItem(this.THEME_KEY) || this.LIGHT_THEME;
+    } catch (e) {
+        console.error('Unable to get theme from Local Storage: ', e);
+    }
+    return theme;
   }
 }

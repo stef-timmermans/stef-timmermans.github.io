@@ -1,3 +1,10 @@
+/*
+* Folder: src/app/content/footer
+* Component: footer
+*     The footer component is used to display the footer
+*   of the website. It is displayed on every page.
+*/
+
 import { Component } from '@angular/core';
 
 @Component({

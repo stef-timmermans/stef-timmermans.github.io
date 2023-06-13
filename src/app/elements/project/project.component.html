@@ -1,0 +1,27 @@
+<div class="project-container">
+    <!-- Displays the project name as a hyperlink to the repository -->
+    <div class="project-name">
+        <h3>
+            <a [href]="repository" target="_blank">{{ name }}
+                <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+        </h3>
+    </div>
+    
+    <!-- Displays the project description -->
+    <div class="project-description">
+        <p>{{ description }}</p>
+    </div>
+    
+    <!-- Displays the project tags -->
+    <div class="tag-list">
+        <div class="tag" *ngFor="let tag of tags">
+            {{ tag }}
+        </div>
+    </div>    
+
+    <!-- Displays the project image -->
+    <div class="project-image">
+        <img [src]="image" alt="Image of {{ name }}">
+    </div>
+</div>

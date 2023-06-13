@@ -1,1 +1,19 @@
-<p>projects works!</p>
+<div class="projects-page-content">
+    <h1>Projects</h1>
+    <h4>A list of my projects and the technogies used in their development.</h4>
+
+    <div class="projects-list">
+        <!-- Pass project data to each project component -->
+        <div *ngFor="let projectParams of projects">
+            <app-project
+                [id]="projectParams.id"
+                [name]="projectParams.name"
+                [description]="projectParams.description"
+                [tags]="projectParams.tags"
+                [repository]="projectParams.repository"
+                [image]="projectParams.image">
+            </app-project>
+        </div>
+
+    </div>
+</div>

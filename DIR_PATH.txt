@@ -52,6 +52,15 @@ src {
 
             }
 
+            project {
+
+                project.component.html
+                project.component.scss
+                project.component.spec.ts
+                project.component.ts
+
+            }
+
         }
 
         pages {
@@ -133,6 +142,9 @@ src {
     assets {
 
         .gitkeep
+        banking-database-project.png
+        cuttlefish.png
+        home-page.png
 
     }
 
