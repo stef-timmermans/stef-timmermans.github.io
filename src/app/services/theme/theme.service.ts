@@ -1,3 +1,12 @@
+/*
+* Folder: src/app/services/theme
+* Component: theme
+*     The theme service is used to manage the theme of the
+*   website. It is used to set the theme, toggle the theme,
+*   and get the current theme. The theme is stored in local
+*   storage so that it persists between page loads.
+*/
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
