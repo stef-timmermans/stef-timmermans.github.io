@@ -1,3 +1,14 @@
+/*
+* Folder: src/app/pages/projects
+* Component: projects
+*     This page displays the list of projects as cards.
+*   Each card's information is passed down to the individual
+*   project component, which is used to display the project.
+*   The project's information is stored in this file, with
+*   the exception of the images, which are stored in the
+*   assets folder (src/assets).
+*/
+
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
@@ -51,7 +62,7 @@ export class ProjectsComponent {
           It allows for the modification of projects, sprints, and tasks, as well as
           creation of just-in-time Gantt charts. Cuttlefish was done as a
           part of the Oregon State University 2023 College of Engineering Capstone
-          program (CS team 95).
+          program (CS Team 95).
         `,
 
       tags: ['Angular', 'TypeScript', 'C#', 'SQL', '.NET', 'Azure'],

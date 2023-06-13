@@ -1,3 +1,11 @@
+/*
+* Folder: src/app/elements/theme-switch
+* Component: theme-switch
+*     The theme switcher is a button that toggles the theme
+*   between light and dark mode. It utilizes the theme service
+*   to change the theme.
+*/
+
 import { Component } from '@angular/core';
 import { ThemeService } from '../../services/theme/theme.service';
 
