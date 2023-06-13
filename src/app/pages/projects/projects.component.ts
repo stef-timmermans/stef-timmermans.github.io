@@ -11,21 +11,6 @@ export class ProjectsComponent {
   projects = [
     {
       id: 0,
-      name: 'Database Banking Project',
-
-      description:
-        `
-          This project is a simple application that allows for CRUD operation on
-          hypothetical tables that a bank would use.
-        `,
-      
-      tags: ['JavaScipt', 'Handlebars', 'SQL'],
-      repository: 'https://github.com/OvercastSolutions/banking-database-project',
-      image: 'assets/banking-database-project.png'
-    },
-
-    {
-      id: 1,
       name: 'Portfolio Website',
 
       description:
@@ -40,7 +25,22 @@ export class ProjectsComponent {
       repository: 'https://github.com/stef-timmermans/stef-timmermans.github.io',
       image: 'assets/home-page.png'
     },
+    {
+      id: 1,
+      name: 'Database Banking Project',
 
+      description:
+        `
+          This project is a simple application that allows for CRUD operation on
+          hypothetical tables that a bank would use. Features triggers that allow
+          for automatic updates to balances with transactions and two pages that
+          cleanly display JOINs with cascading behavior.
+        `,
+      
+      tags: ['JavaScipt', 'Handlebars', 'SQL'],
+      repository: 'https://github.com/OvercastSolutions/banking-database-project',
+      image: 'assets/banking-database-project.png'
+    },
     {
       id: 2, 
       name: 'Cuttlefish',
