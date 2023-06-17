@@ -2,8 +2,8 @@
 .project-container {
     display: grid;
     grid-template-areas:
-      'name image'
-      'description image'
+      'name-and-description image'
+      'name-and-description image'
       'tags image';
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
@@ -13,6 +13,22 @@
     margin-bottom: 20px;
     gap: 10px;
 }
+
+// Project grid for mobile
+@media (max-width: 600px) {
+    .project-container {
+        grid-template-areas:
+            'name-and-description'
+            'image'
+            'tags';
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        margin-top: -0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}  
 
 .project-name {
     grid-area: name;
@@ -28,6 +44,8 @@
 
         transition: color 0.2s;
     }
+
+    padding-bottom: 0.5rem;
 }
 
 .project-description {
