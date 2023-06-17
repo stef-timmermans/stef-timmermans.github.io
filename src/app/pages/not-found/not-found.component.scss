@@ -1,0 +1,31 @@
+.not-found-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main-text {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin-right: 50%;
+}
+
+.repo {
+    color: var(--hd-ft-text-color);
+
+    &:hover {
+        color: var(--hovered-color);
+    }
+
+    transition: color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--text-color) !important;
+    border-color: var(--text-color) !important;
+    color: var(--bg-color) !important;
+    padding: 0.5rem 1rem;
+}
