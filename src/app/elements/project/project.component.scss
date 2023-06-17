@@ -2,8 +2,8 @@
 .project-container {
     display: grid;
     grid-template-areas:
-      'name image'
-      'description image'
+      'name-and-description image'
+      'name-and-description image'
       'tags image';
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
@@ -28,6 +28,8 @@
 
         transition: color 0.2s;
     }
+
+    padding-bottom: 0.5rem;
 }
 
 .project-description {
