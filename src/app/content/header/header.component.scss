@@ -75,6 +75,7 @@ $btn-font-size: 2rem;
     }
 
     .hamburger-btn {
+        color: var(--hd-ft-text-color);
         display: inline;
         border: none;
         background: transparent;
@@ -159,6 +160,7 @@ $half-cube-size: math.div($cube-size, 2);
 }
 
 .close-btn {
+    color: var(--hd-ft-text-color);
     position: absolute;
     top: 1rem;
     right: 1rem;
