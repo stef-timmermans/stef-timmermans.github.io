@@ -14,6 +14,22 @@
     gap: 10px;
 }
 
+// Project grid for mobile
+@media (max-width: 600px) {
+    .project-container {
+        grid-template-areas:
+            'name-and-description'
+            'image'
+            'tags';
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        margin-top: -0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}  
+
 .project-name {
     grid-area: name;
     align-self: start;
