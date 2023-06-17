@@ -1,11 +1,14 @@
 @use 'sass:math';
 
+$header-padding: 1.5rem;
+$btn-font-size: 2rem;
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 10% 1.5rem 2%;
-    padding-right: 1.5rem;
+    padding: $header-padding 10% $header-padding 2%;
+    padding-right: $header-padding;
     background-color: var(--hd-ft-color);
 }
 
@@ -13,89 +16,133 @@
     padding-left: 1rem;
     display: flex;
     justify-content: center;
-    gap: 30px; // Adjust gap for links
+    gap: 30px;
+
+    .link {
+        color: var(--hd-ft-text-color);
+        text-decoration: none;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        transition: color 0.2s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--hd-ft-text-color);
+            transition: background-color 0.2s;
+        }
+
+        &:hover {
+            color: var(--hovered-color);
+
+            &::after {
+                background-color: var(--hovered-color);
+            }
+        }
+    }
 }
 
-.nav-links .link {
-    color: var(--hd-ft-text-color);
-    text-decoration: none;
-    font-size: 1.5rem; // Adjust text size for links
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
+@media (max-width: 600px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0;
+        overflow: hidden;
+        flex-direction: column;
+        gap: 1rem;
+        transition: width 0.5s ease;
+        z-index: 1;
+        background: var(--hd-ft-color);
+        padding: 20px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 1px; // Adjust thickness of the underline here
-      background-color: var(--hd-ft-text-color);
-      transition: background-color 0.2s;
+        &.open {
+            width: 75%;
+        }
     }
 
-    &:hover {
-      color: var(--hovered-color);
+    .hamburger-btn {
+        display: inline;
+        border: none;
+        background: transparent;
+        font-size: $btn-font-size;
+        transition: color 0.2s;
 
-      &::after {
-        background-color: var(--hovered-color);
-      }
+        &:hover {
+            color: var(--hovered-color);
+        }
+    }
+}
+
+@media (min-width: 601px) {
+    .nav-links {
+        position: relative;
+        flex-direction: row;
+        height: auto;
+        width: auto;
     }
 
-    transition: color 0.2s;
+    .hamburger-btn {
+        display: none;
+    }
 }
 
 $cube-size: 40px;
 $half-cube-size: math.div($cube-size, 2);
 
 .cube {
-  position: relative;
-  width: $cube-size;
-  height: $cube-size;
-  transform-style: preserve-3d;
-  animation: spin 5s infinite linear;
+    position: relative;
+    width: $cube-size;
+    height: $cube-size;
+    transform-style: preserve-3d;
+    animation: spin 5s infinite linear;
 }
 
 .face {
-  position: absolute;
-  width: $cube-size;
-  height: $cube-size;
-  background: var(--cube-color);
-  border:0px solid black; // Adjust border
-  box-shadow: 0 0 0px rgba(0,0,0,0.3); // Adjust shadow
+    position: absolute;
+    width: $cube-size;
+    height: $cube-size;
+    background: var(--cube-color);
+    border:0px solid black;
+    box-shadow: 0 0 0px rgba(0,0,0,0.3);
 }
 
 .front {
-  transform: translateZ($half-cube-size);
+    transform: translateZ($half-cube-size);
 }
 
 .back {
-  transform: rotateY(180deg) translateZ($half-cube-size);
+    transform: rotateY(180deg) translateZ($half-cube-size);
 }
 
 .right {
-  transform: rotateY(90deg) translateZ($half-cube-size);
+    transform: rotateY(90deg) translateZ($half-cube-size);
 }
 
 .left {
-  transform: rotateY(-90deg) translateZ($half-cube-size);
+    transform: rotateY(-90deg) translateZ($half-cube-size);
 }
 
 .top {
-  transform: rotateX(90deg) translateZ($half-cube-size);
+    transform: rotateX(90deg) translateZ($half-cube-size);
 }
 
 .bottom {
-  transform: rotateX(-90deg) translateZ($half-cube-size);
+    transform: rotateX(-90deg) translateZ($half-cube-size);
 }
 
 @keyframes spin {
-  0% { transform: rotateX(-45deg) rotateY(0deg); }
-  100% { transform: rotateX(-45deg) rotateY(1turn); }
+    0% { transform: rotateX(-45deg) rotateY(0deg); }
+    100% { transform: rotateX(-45deg) rotateY(1turn); }
 }
-
 
 .spinning-cube {
     padding-right: 2rem;
@@ -103,4 +150,19 @@ $half-cube-size: math.div($cube-size, 2);
 
 .theme-switcher {
     margin-left: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: $btn-font-size;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+        color: var(--hovered-color);
+    }
 }

@@ -13,11 +13,16 @@
         </a>
     </div>
 
-    <div class="nav-links">
+    <div class="nav-links" [class.open]="isSidePanelOpen">
         <a href="/projects" class="link">Projects</a>
         <a href="/about-me" class="link">About Me</a>
         <a href="/contact" class="link">Resume and Contact</a>
+        <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn">X</button>
     </div>
+
+    <button (click)="toggleSidePanel()" class="hamburger-btn">
+        <i class="bi bi-list"></i>
+    </button>
 
     <div class="theme-switcher">
         <app-theme-switch></app-theme-switch>
