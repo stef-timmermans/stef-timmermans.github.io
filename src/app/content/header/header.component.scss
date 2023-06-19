@@ -84,7 +84,6 @@ $half-cube-size: math.div($cube-size, 2);
         background: transparent;
         font-size: $btn-font-size;
         transition: color 0.2s;
-        padding-left: 0.5rem;
 
         &:hover {
             color: var(--hovered-color);
