@@ -2,6 +2,8 @@
 
 $header-padding: 1.5rem;
 $btn-font-size: 2rem;
+$cube-size: 40px;
+$half-cube-size: math.div($cube-size, 2);
 
 .header-content {
     display: flex;
@@ -17,6 +19,12 @@ $btn-font-size: 2rem;
     display: flex;
     justify-content: center;
     gap: 30px;
+    transition: transform 0s ease;
+
+    &.open {
+        transform: translateX(0);
+        transition: transform 0.5s ease;
+    }
 
     .link {
         color: var(--hd-ft-text-color);
@@ -60,14 +68,9 @@ $btn-font-size: 2rem;
         overflow: hidden;
         flex-direction: column;
         gap: 1rem;
-        transition: transform 0.5s ease;
-        z-index: 1;
+        z-index: 9999;
         background: var(--hd-ft-color);
         padding: 20px;
-
-        &.open {
-            transform: translateX(0);
-        }
     }
     
     .spinning-cube {
@@ -81,6 +84,7 @@ $btn-font-size: 2rem;
         background: transparent;
         font-size: $btn-font-size;
         transition: color 0.2s;
+        padding-left: 0.5rem;
 
         &:hover {
             color: var(--hovered-color);
@@ -101,9 +105,6 @@ $btn-font-size: 2rem;
         display: none;
     }
 }
-
-$cube-size: 40px;
-$half-cube-size: math.div($cube-size, 2);
 
 .cube {
     position: relative;

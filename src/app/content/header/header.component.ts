@@ -8,15 +8,32 @@
 *   theme switch button is in the top right corner.
 */
 
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router, Event, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
   isSidePanelOpen = false;
+  routerSubscription: Subscription = new Subscription();
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.routerSubscription = this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        this.isSidePanelOpen = false;
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.routerSubscription.unsubscribe();
+  }
 
   toggleSidePanel() {
     this.isSidePanelOpen = !this.isSidePanelOpen;
