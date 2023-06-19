@@ -14,9 +14,9 @@
     </div>
 
     <div class="nav-links" [class.open]="isSidePanelOpen">
-        <a href="/projects" class="link">Projects</a>
-        <a href="/about-me" class="link">About Me</a>
-        <a href="/contact" class="link">Resume and Contact</a>
+        <a routerLink="/projects" class="link">Projects</a>
+        <a routerLink="/about-me" class="link">About Me</a>
+        <a routerLink="/contact" class="link">Resume and Contact</a>
         <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn">X</button>
     </div>
 
