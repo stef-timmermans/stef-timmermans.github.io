@@ -1,0 +1,35 @@
+.about-me-content {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2rem;
+    padding-bottom: rem;
+    align-items: flex-start;
+
+    .main-subtitle {
+        padding-bottom: 1rem;
+    }
+
+    padding-bottom: 2rem;
+}
+
+.link {
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      color: var(--hovered-color);
+    }
+    
+    transition: color 0.2s;
+}
