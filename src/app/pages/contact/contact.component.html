@@ -21,10 +21,24 @@
             Contact
         </h1>
         <h4 class="contact-subtitle">
-            <!--
-                <a href="mailto:{{this.mailto}}">{{this.mailto}}</a>
-            -->
+
         </h4>
+
+        <div class="email-form">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <label for="user_email">Your Email:</label>
+                <input id="user_email" type="email" formControlName="user_email" required>
+              
+                <label for="email_title">Email Title:</label>
+                <input id="email_title" formControlName="email_title" required>
+              
+                <label for="message">Your Message:</label>
+                <textarea id="message" formControlName="message" required></textarea>
+              
+                <button type="submit">Send Email</button>
+              </form>
+              
+        </div>
     </div>
 
 </div>

@@ -10,6 +10,8 @@
 
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { FormBuilder, Validators } from '@angular/forms';
+import { EmailService } from '../../services/email/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -18,9 +20,19 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent {
 
-  // mailto = 'mailto:';
+  contactForm = this.fb.group({
+    user_email: ['', Validators.required], // User email
+    email_title: ['', Validators.required], // Email title
+    message: ['', Validators.required] // Message content
+  });
 
-  constructor(private titleService: Title ) {
-    this.titleService.setTitle('Contact');
+  constructor(private fb: FormBuilder, private emailService: EmailService) { }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+      this.emailService.sendEmail(this.contactForm.value);
+    } else {
+      console.error('Email form is invalid!');
+    }
   }
 }
