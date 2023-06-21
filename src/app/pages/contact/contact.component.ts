@@ -18,6 +18,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent {
 
+  // mailto = 'mailto:';
+
   constructor(private titleService: Title ) {
     this.titleService.setTitle('Contact');
   }
