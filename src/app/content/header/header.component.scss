@@ -68,13 +68,13 @@ $half-cube-size: math.div($cube-size, 2);
         overflow: hidden;
         flex-direction: column;
         gap: 1rem;
-        z-index: 9999;
         background: var(--hd-ft-color);
         padding: 20px;
     }
     
     .spinning-cube {
         padding-left: 1rem;
+        z-index: 9999;
     }
 
     .hamburger-btn {
