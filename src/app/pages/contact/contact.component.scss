@@ -1,0 +1,21 @@
+.contact-content {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 1rem;
+    align-items: flex-start;
+
+    .title-resume {
+        padding-bottom: 2rem;
+    }
+
+    .title-contact {
+        padding-bottom: 2rem;
+    }
+}
