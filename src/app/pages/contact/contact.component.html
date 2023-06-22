@@ -8,7 +8,7 @@
             <!-- <a href="https://TODO" target="_blank"> -->
                 <i class="bi bi-file-earmark-pdf"></i>
                 
-                    Safely download my latest resume as a PDf
+                    Safely download my latest resume as a PDF
                     through Google Drive.
                 
                 <i class="bi bi-box-arrow-up-right"></i>
@@ -26,15 +26,25 @@
 
         <div class="email-form">
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                <label for="user_email">Your Email:</label>
-                <input id="user_email" type="email" formControlName="user_email" required>
+                <label class="from-text" for="user_email">Your Email:</label>
+                <br>
+                <input class="from-form" id="user_email" type="email" formControlName="user_email" required>
               
-                <label for="email_title">Email Title:</label>
-                <input id="email_title" formControlName="email_title" required>
+                <br>
+
+                <label class="title-text" for="email_title">Email Title:</label>
+                <br>
+                <input class="title-form" id="email_title" formControlName="email_title" required>
               
-                <label for="message">Your Message:</label>
-                <textarea id="message" formControlName="message" required></textarea>
+                <br>
+
+                <label class="message-text" for="message">Your Message:</label>
+                <br>
+                <textarea class="message-form" id="message" formControlName="message" required></textarea>
               
+                <br>
+                <br>
+
                 <button type="submit">Send Email</button>
               </form>
               
