@@ -18,6 +18,20 @@
             padding-top: 1rem;
             font-size: 1.2rem;
         }
+
+        .pdf-link {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            &:hover {
+            color: var(--hovered-color);
+            }
+            
+            transition: color 0.2s;
+        }
     }
 
     .contact-sub-content {
