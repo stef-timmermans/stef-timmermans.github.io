@@ -8,9 +8,9 @@
             <a class="pdf-link" href="https://drive.google.com/drive/folders/1Y7IGpV2Q-G7IpCDscdpzvKqXjvJf7TJJ?usp=sharing" 
              target="_blank">
                 <i class="bi bi-file-earmark-pdf"></i>
-                
-                    Download my latest resume (.pdf and .docx)
-                    through Google Drive.
+
+                        Download my latest resume (.pdf and .docx)
+                        through Google Drive.
                 
                 <i class="bi bi-box-arrow-up-right"></i>
             </a>
@@ -21,31 +21,31 @@
         <h1 class="contact-title">
             Contact
         </h1>
-        <h4 class="contact-subtitle">
-
-        </h4>
+        <p class="contact-subtitle">
+            Requires external email application due to GitHub Pages limitations.
+        </p>
 
         <div class="email-form">
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                <label class="from-text" for="user_email">Your Email:</label>
+                <label class="from-text" for="user_email"><h4>Your Email:</h4></label>
                 <br>
                 <input class="from-form" id="user_email" type="email" formControlName="user_email" required>
               
                 <br>
 
-                <label class="title-text" for="email_title">Email Title:</label>
+                <label class="title-text" for="email_title"><h4>Email Title:</h4></label>
                 <br>
                 <input class="title-form" id="email_title" formControlName="email_title" required>
               
                 <br>
 
-                <label class="message-text" for="message">Your Message:</label>
+                <label class="message-text" for="message"><h4>Your Message:</h4></label>
                 <br>
                 <textarea class="message-form" id="message" formControlName="message" required></textarea>
 
                 <br>
 
-                <button type="submit" class="btn btn-primary submit-button">Open Email Application With Form Information</button>
+                <button type="submit" class="btn btn-primary submit-button">Send Email Using Extenal Application (Requires Valid Input)</button>
               </form>
         </div>
 
