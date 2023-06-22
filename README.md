@@ -1,6 +1,6 @@
 # About My Portfolio Website
 
-This is the repository for my portfolio website. It's built using Angular and showcases some of my work as a software engineer. This project is in active development and should have an initial release this summer.
+## This is the repository for my portfolio website. It's built using Angular and showcases some of my work as a software engineer.
 
 <br>
 
@@ -8,15 +8,17 @@ This is the repository for my portfolio website. It's built using Angular and sh
 
 <br>
 
-# Pages
+# Site Structure
+
+**This website consists of the following pages:**
 
 1. **Home:** Here you'll find a brief introduction about me and what I do.
 
 2. **Projects:** This page showcases some of the projects that I've worked on. Each project includes a brief description, the tech stack I used, and a link to the documentation, if applicable.
 
-3. **About Me:** On this page, you'll find more information about me, my skills, and my experience in the tech industry.
+3. **About Me:** On this page, you'll find more information about me, my skills, and my hobbies outside of the industry.
 
-4. **Resume and Contact:** If you're interested in my work and would like to get in touch, head over to the contact page. There's a form you can fill out to send me an email directly. You can also find a Google Drive link to my current resume.
+4. **Resume and Contact:** If you're interested in my work and would like to get in touch, head over to the contact page. There's a form you can fill out to send me an email directly. Due to limitations with GitHub Pages, this form requires an external email application (though all you need to do is verify its contents and hit send). You can also find a Google Drive link to my current resume.
 
 <br>
 

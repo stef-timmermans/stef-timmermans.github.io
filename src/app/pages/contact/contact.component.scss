@@ -18,9 +18,60 @@
             padding-top: 1rem;
             font-size: 1.2rem;
         }
+
+        .pdf-link {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            &:hover {
+            color: var(--hovered-color);
+            }
+            
+            transition: color 0.2s;
+        }
     }
 
-    .contact-contact {
-        padding-bottom: 2rem;
+    .contact-sub-content {
+        width: 100%;
+
+        .contact-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .email-form {
+            width: 100%;
+
+            .from-text,
+            .title-text,
+            .message-text {
+                font-size: 1.2rem;
+            }
+
+            .from-form,
+            .title-form,
+            .message-form {
+                color: var(--text-color);
+                margin-bottom: 1rem;
+                border: 1px solid var(--text-color);
+                border-radius: 4px;
+                background-color: var(--bg-color);
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .message-form {
+                height: 10rem;
+            }
+
+            .submit-button {
+                color: var(--bg-color);
+                background-color: var(--text-color);
+                margin-bottom: 2rem;
+            }
+        }
     }
 }

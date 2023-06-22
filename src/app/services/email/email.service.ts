@@ -12,4 +12,9 @@ import { Injectable } from '@angular/core';
 export class EmailService {
 
   constructor() { }
+
+  sendEmail(emailDetails: any) {
+    let link = `mailto:forwardto.stef.timmermans@gmail.com?subject=${emailDetails.email_title}&body=Message from: ${emailDetails.user_email} %0D%0A ${emailDetails.message}`;
+    window.location.href = link;
+  }
 }
