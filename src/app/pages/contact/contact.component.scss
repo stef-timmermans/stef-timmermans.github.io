@@ -27,6 +27,13 @@
 
     .from-form {
         margin-bottom: 2rem;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        border-radius: 4px;
+        background-color: var(--bg-color);
+        width: calc(100vw - 6rem);
+        box-sizing: border-box;
+        
     }
 
     .title-text {
@@ -35,13 +42,35 @@
 
     .title-form {
         margin-bottom: 2rem;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        border-radius: 4px;
+        background-color: var(--bg-color);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .message-text {
         font-size: 1.2rem;
     }
 
-    .messege-form {
+    .message-form {
+        margin-bottom: 1rem;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        border-radius: 4px;
+        background-color: var(--bg-color);
+        width: 100%;
+        margin-right: 4rem;
+        box-sizing: border-box;
+        height: 10rem;
+    }
+
+    .submit-button {
+        background-color: var(--text-color) !important;
+        border-color: var(--text-color) !important;
+        color: var(--bg-color) !important;
+        padding: 0.5rem 1rem;
         margin-bottom: 2rem;
     }
 }
