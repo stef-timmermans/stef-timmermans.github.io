@@ -26,7 +26,12 @@ export class ContactComponent {
     message: ['', Validators.required] // Message content
   });
 
-  constructor(private fb: FormBuilder, private emailService: EmailService) { }
+  constructor(private fb: FormBuilder,
+              private emailService: EmailService,
+              private titleService: Title) {
+
+    this.titleService.setTitle('Contact');
+  }
 
   onSubmit() {
     if (this.contactForm.valid) {
