@@ -1,7 +1,7 @@
 <div class="header-content">
 
     <div class="spinning-cube">
-        <a routerLink="/" matTooltip="Click here to go to the home page.">
+        <a routerLink="/" matTooltip="Click here to go to the home page." (click)="closeSidePanel()">
             <div class="cube">
                 <div class="face front"></div>
                 <div class="face back"></div>
@@ -11,14 +11,14 @@
                 <div class="face bottom"></div>
             </div>            
         </a>
-    </div>
+    </div>    
 
     <div class="nav-links" [class.open]="isSidePanelOpen">
-        <a routerLink="/projects" class="link">Projects</a>
-        <a routerLink="/about-me" class="link">About Me</a>
-        <a routerLink="/contact" class="link">Resume and Contact</a>
+        <a routerLink="/projects" class="link" (click)="closeSidePanel()">Projects</a>
+        <a routerLink="/about-me" class="link" (click)="closeSidePanel()">About Me</a>
+        <a routerLink="/contact" class="link" (click)="closeSidePanel()">Resume and Contact</a>
         <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn">X</button>
-    </div>
+    </div>    
 
     <button (click)="toggleSidePanel()" class="hamburger-btn">
         <i class="bi bi-list"></i>
