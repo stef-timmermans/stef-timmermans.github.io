@@ -38,4 +38,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   toggleSidePanel() {
     this.isSidePanelOpen = !this.isSidePanelOpen;
   }
+
+  closeSidePanel() {
+    this.isSidePanelOpen = false;
+  }
 }
