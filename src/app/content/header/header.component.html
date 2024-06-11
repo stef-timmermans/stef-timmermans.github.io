@@ -1,7 +1,7 @@
 <div class="header-content">
 
     <div class="spinning-cube">
-        <a routerLink="/" matTooltip="Click here to go to the home page." (click)="closeSidePanel()">
+        <a routerLink="/" matTooltip="Go to the home page" (click)="closeSidePanel()">
             <div class="cube">
                 <div class="face front"></div>
                 <div class="face back"></div>
@@ -14,9 +14,16 @@
     </div>    
 
     <div class="nav-links" [class.open]="isSidePanelOpen">
-        <a routerLink="/projects" class="link" (click)="closeSidePanel()">Projects</a>
+        <a routerLink="/" class="link" (click)="closeSidePanel()">Home</a>
         <a routerLink="/about-me" class="link" (click)="closeSidePanel()">About Me</a>
+        <a routerLink="/projects" class="link" (click)="closeSidePanel()">Projects</a>
+        <!---
+        For now, remove the "Contact" page until I can figure out an appropriate serice to use
+        to send emails. For now, include relevant information about myself on thes home page and
+        the 
+
         <a routerLink="/contact" class="link" (click)="closeSidePanel()">Resume and Contact</a>
+        -->
         <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn">X</button>
     </div>    
 
@@ -27,5 +34,5 @@
     <div class="theme-switcher">
         <app-theme-switch></app-theme-switch>
     </div>
-    
+
 </div>

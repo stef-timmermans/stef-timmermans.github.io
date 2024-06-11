@@ -28,8 +28,10 @@ export class ProjectsComponent {
         `
           You are currently viewing the deployment of this project! This website
           was created using the Angular CLI, and is hosted on GitHub Pages. It loads
-          the various pages and elements using components, and uses custom services to change
-          the theme and send emails to the owner.
+          the various pages and elements using components and also uses a specific
+          service component to allow for changing the theme via the button in the
+          header. Image from the original version of the website, current deployment
+          looks slightly different.
         `,
         
       tags: ['Angular', 'TypeScript', 'GitHub Pages'],
