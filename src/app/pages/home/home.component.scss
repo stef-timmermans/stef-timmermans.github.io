@@ -10,9 +10,18 @@
   align-items: flex-start;
 }
 
-.description {
+.description_1 {
   padding-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+
+  // if screen is at least 601 pixels
+  @media (min-width: 601px) {
+    max-width: 50%;
+  }
+}
+
+.description_2 {
+  margin-bottom: 3rem;
 
   // if screen is at least 601 pixels
   @media (min-width: 601px) {
