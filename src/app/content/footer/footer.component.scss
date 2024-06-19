@@ -28,3 +28,11 @@
     transition: color 0.2s;
     margin-bottom: 0; /* No margin-bottom */
 }
+
+@media (max-width: 601px) {
+    .footer-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
