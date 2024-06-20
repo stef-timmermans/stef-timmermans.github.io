@@ -157,7 +157,8 @@ $half-cube-size: math.div($cube-size, 2);
         padding-right: 2rem;
     }
 
-    // otherwise, leave no padding to make next to cube
+    // set layer to be below the side-panel on mobile
+    z-index: 0;
 }
 
 .theme-switcher {
@@ -168,7 +169,7 @@ $half-cube-size: math.div($cube-size, 2);
     color: var(--hd-ft-text-color);
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: -0.5rem;
     background: none;
     border: none;
     font-size: $btn-font-size;
