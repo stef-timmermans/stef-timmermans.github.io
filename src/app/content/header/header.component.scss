@@ -152,7 +152,12 @@ $half-cube-size: math.div($cube-size, 2);
 }
 
 .spinning-cube {
-    padding-right: 2rem;
+    // if screen is at least 601 pixels
+    @media (min-width: 601px) {
+        padding-right: 2rem;
+    }
+
+    // otherwise, leave no padding to make next to cube
 }
 
 .theme-switcher {
