@@ -1,4 +1,4 @@
-// Create grid for individual project
+// create grid for individual project
 .project-container {
     display: grid;
     grid-template-areas:
@@ -14,7 +14,7 @@
     gap: 10px;
 }
 
-// Project grid for mobile
+// project grid for mobile
 @media (max-width: 600px) {
     .project-container {
         grid-template-areas:

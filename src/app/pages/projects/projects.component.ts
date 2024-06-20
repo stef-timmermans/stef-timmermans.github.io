@@ -44,13 +44,13 @@ export class ProjectsComponent {
 
       description:
         `
-          This project is a simple application that allows for CRUD operation on
-          hypothetical tables that a bank would use. Features triggers that allow
+          This project is a simple application that allows for CRUD operations on
+          hypothetical tables that a bank would use. It features triggers that allow
           for automatic updates to balances with transactions and two pages that
           cleanly display JOINs with cascading behavior.
         `,
       
-      tags: ['JavaScipt', 'Handlebars', 'SQL'],
+      tags: ['JavaScript', 'Handlebars', 'SQL'],
       repository: 'https://github.com/OvercastSolutions/banking-database-project',
       image: 'assets/banking-database-project.png'
     },
@@ -62,7 +62,7 @@ export class ProjectsComponent {
         `
           Cuttlefish is a simple, yet powerful, web-based project management tool.
           It allows for the modification of projects, sprints, and tasks, as well as
-          creation of just-in-time Gantt charts. Cuttlefish was done as a
+          the creation of just-in-time Gantt charts. Cuttlefish was done as a
           part of the Oregon State University 2023 College of Engineering Capstone
           program (CS Team 95).
         `,

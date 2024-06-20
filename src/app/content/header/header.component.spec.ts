@@ -10,7 +10,7 @@ describe('HeaderComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent, ThemeSwitchComponent],
-      providers: [ThemeService]  // provide the ThemeService here
+      providers: [ThemeService]
     });
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
