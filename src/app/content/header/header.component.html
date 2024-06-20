@@ -1,7 +1,13 @@
 <div class="header-content">
-
+    <!--
+    Insert the line `matTooltip="Go to the home page"`
+    to add a tooltip to the spinning cube. This was
+    removed for the final version of the site to be
+    a bit cleaner.
+    -->
     <div class="spinning-cube">
-        <a routerLink="/" matTooltip="Go to the home page" (click)="closeSidePanel()">
+        <a routerLink="/"
+        (click)="closeSidePanel()">
             <div class="cube">
                 <div class="face front"></div>
                 <div class="face back"></div>
