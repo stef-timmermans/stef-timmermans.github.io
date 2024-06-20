@@ -24,14 +24,14 @@
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color); /* Set the body background color */
+  color: var(--text-color); /* Set the body text color */
+  font-family: 'Roboto', sans-serif; /* Set the font family */
 }
 
 app-header, app-footer {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
+  background-color: var(--primary-color); /* Set the header and footer background color */
+  color: var(--bg-color); /* Set the header and footer text color */
 }
 
 /* Set styles for the scrollbar */
@@ -53,5 +53,6 @@ html {
   scrollbar-color: var(--text-color) var(--hd-ft-color);
 }
 
+/* Set styles for the text throughout the app */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

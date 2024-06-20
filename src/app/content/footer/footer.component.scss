@@ -5,11 +5,10 @@
     justify-content: center;
     color: var(--hd-ft-text-color);
     background-color: var(--hd-ft-color);
-    padding: 0.5rem 0.5rem 0; /* No padding-bottom */
+    padding: 0.5rem 0.5rem 0;
 }
 
 .author {
-    /* No margins */
     margin-bottom: 0rem;
     margin-top: 0.5rem;
 }
@@ -26,7 +25,7 @@
     }
 
     transition: color 0.2s;
-    margin-bottom: 0; /* No margin-bottom */
+    margin-bottom: 0;
 }
 
 @media (max-width: 601px) {
