@@ -19,6 +19,7 @@ import { ThemeService } from './services/theme/theme.service';
 import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
 import { ProjectComponent } from './elements/project/project.component';
 import { ResumeComponent } from './pages/resume/resume.component';
+import { CompanyComponent } from './elements/company/company.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ResumeComponent } from './pages/resume/resume.component';
     FooterComponent,
     ThemeSwitchComponent,
     ProjectComponent,
-    ResumeComponent
+    ResumeComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,
