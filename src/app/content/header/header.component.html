@@ -16,9 +16,10 @@
     <div class="nav-links" [class.open]="isSidePanelOpen">
         <a routerLink="/" class="link" (click)="closeSidePanel()">Home</a>
         <a routerLink="/about-me" class="link" (click)="closeSidePanel()">About Me</a>
+        <a routerLink="/resume" class="link" (click)="closeSidePanel()">Resume</a>
         <a routerLink="/projects" class="link" (click)="closeSidePanel()">Projects</a>
         <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn">X</button>
-    </div>    
+    </div>
 
     <button (click)="toggleSidePanel()" class="hamburger-btn">
         <i class="bi bi-list"></i>

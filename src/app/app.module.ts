@@ -18,6 +18,7 @@ import { ThemeService } from './services/theme/theme.service';
 
 import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
 import { ProjectComponent } from './elements/project/project.component';
+import { ResumeComponent } from './pages/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProjectComponent } from './elements/project/project.component';
     HeaderComponent,
     FooterComponent,
     ThemeSwitchComponent,
-    ProjectComponent
+    ProjectComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
