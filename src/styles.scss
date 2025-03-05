@@ -29,7 +29,8 @@ body {
   font-family: 'Roboto', sans-serif; /* Set the font family */
 }
 
-app-header, app-footer {
+app-header,
+app-footer {
   background-color: var(--primary-color); /* Set the header and footer background color */
   color: var(--bg-color); /* Set the header and footer text color */
 }
@@ -38,11 +39,9 @@ app-header, app-footer {
 ::-webkit-scrollbar {
   width: 0.70rem;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--hd-ft-color);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--text-color);
 }
@@ -54,5 +53,11 @@ html {
 }
 
 /* Set styles for the text throughout the app */
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body { 
+  height: 100%;
+}
+body { 
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
