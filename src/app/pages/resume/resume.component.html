@@ -11,8 +11,19 @@
     </h4>
     <h1 class="main-title">Experience</h1>
     <h4 class="main-subtitle">A list of the companies I've worked for.</h4>
-    <p class="main-body">
-        <!-- TODO: Create company card component -->
-    </p>
+    <div class="companies-list">
+        <!-- Pass company data to each company component -->
+        <div *ngFor="let companyParams of companies">
+            <app-company
+                [id]="companyParams.id"
+                [name]="companyParams.name"
+                [role]="companyParams.role"
+                [description]="companyParams.description"
+                [tags]="companyParams.tags"
+                [linkedin]="companyParams.linkedin">
+            </app-company>
+        </div>
+
+    </div>
 
 </div>
