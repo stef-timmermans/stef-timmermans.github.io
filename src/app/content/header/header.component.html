@@ -1,10 +1,4 @@
 <div class="header-content">
-    <!--
-    Insert the line `matTooltip="Go to the home page"`
-    to add a tooltip to the spinning cube. This was
-    removed for the final version of the site to be
-    a bit cleaner.
-    -->
     <div class="spinning-cube">
         <a routerLink="/"
         (click)="closeSidePanel()">
@@ -22,16 +16,10 @@
     <div class="nav-links" [class.open]="isSidePanelOpen">
         <a routerLink="/" class="link" (click)="closeSidePanel()">Home</a>
         <a routerLink="/about-me" class="link" (click)="closeSidePanel()">About Me</a>
+        <a routerLink="/resume" class="link" (click)="closeSidePanel()">Resume</a>
         <a routerLink="/projects" class="link" (click)="closeSidePanel()">Projects</a>
-        <!---
-        For now, remove the "Contact" page until I can figure out an appropriate serice to use
-        to send emails. For now, include relevant information about myself on thes home page and
-        the 
-
-        <a routerLink="/contact" class="link" (click)="closeSidePanel()">Resume and Contact</a>
-        -->
         <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn">X</button>
-    </div>    
+    </div>
 
     <button (click)="toggleSidePanel()" class="hamburger-btn">
         <i class="bi bi-list"></i>

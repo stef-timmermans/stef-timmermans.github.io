@@ -1,0 +1,29 @@
+<div class="resume-content">
+    <h1 class="main-title">Resume</h1>
+    <h4 class="main-subtitle">
+        <div class="links">
+            <a href="{{ resumeUrl }}" target="_blank" class="link">
+            <i class="bi bi-file-earmark-pdf"></i>
+            <span>A link to my up-to-date resume (Google Drive)</span>
+            <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+        </div>
+    </h4>
+    <h1 class="main-title">Experience</h1>
+    <h4 class="main-subtitle">A list of the companies I've worked for.</h4>
+    <div class="companies-list">
+        <!-- Pass company data to each company component -->
+        <div *ngFor="let companyParams of companies">
+            <app-company
+                [id]="companyParams.id"
+                [name]="companyParams.name"
+                [role]="companyParams.role"
+                [description]="companyParams.description"
+                [tags]="companyParams.tags"
+                [linkedin]="companyParams.linkedin">
+            </app-company>
+        </div>
+
+    </div>
+
+</div>

@@ -5,7 +5,7 @@
 *   Each card's information is passed down to the individual
 *   project component, which is used to display the project.
 *   The project's information is stored in this file, with
-*   the exception of the images, which are stored in the
+*   the exception to the images, which are stored in the
 *   assets folder (src/assets).
 */
 
@@ -33,7 +33,7 @@ export class ProjectsComponent {
           header. Image from the original version of the website, current deployment
           looks slightly different.
         `,
-        
+
       tags: ['Angular', 'TypeScript', 'GitHub Pages'],
       repository: 'https://github.com/stef-timmermans/stef-timmermans.github.io',
       image: 'assets/home-page.png'
@@ -49,16 +49,16 @@ export class ProjectsComponent {
           for automatic updates to balances with transactions and two pages that
           cleanly display JOINs with cascading behavior.
         `,
-      
+
       tags: ['JavaScript', 'Handlebars', 'SQL'],
       repository: 'https://github.com/OvercastSolutions/banking-database-project',
       image: 'assets/banking-database-project.png'
     },
     {
-      id: 2, 
+      id: 2,
       name: 'Cuttlefish',
 
-      description: 
+      description:
         `
           Cuttlefish is a simple, yet powerful, web-based project management tool.
           It allows for the modification of projects, sprints, and tasks, as well as

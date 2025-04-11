@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { ResumeComponent } from './pages/resume/resume.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about-me', component: AboutMeComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'resume', component: ResumeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: '**', component: NotFoundComponent } // wildcard route for a 404 page
 ];

@@ -1,4 +1,4 @@
-.about-me-content {
+.resume-content {
     padding-left: 2rem;
     padding-top: 2rem;
     padding-right: 2rem;
@@ -18,17 +18,22 @@
     padding-bottom: 4rem;
 }
 
-.link {
-    color: var(--text-color);
-    font-weight: 600;
-    text-decoration: none;
+.links {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    &:hover {
-      color: var(--hovered-color);
-    }
+    flex-direction: column;
+    padding-bottom: 2rem;
+  
+    .link {
+        color: var(--text-color);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     
-    transition: color 0.2s;
+        &:hover {
+            color: var(--hovered-color);
+        }
+        
+        transition: color 0.2s;
+    }
 }

@@ -42,7 +42,7 @@ $half-cube-size: math.div($cube-size, 2);
             left: 0;
             right: 0;
             bottom: 0;
-            height: 1px;
+            height: 0.085rem;
             background-color: var(--hd-ft-text-color);
             transition: background-color 0.2s;
         }
@@ -71,7 +71,7 @@ $half-cube-size: math.div($cube-size, 2);
         background: var(--hd-ft-color);
         padding: 20px;
     }
-    
+
     .spinning-cube {
         padding-left: 1rem;
         z-index: 9999;

@@ -1,0 +1,55 @@
+.company-container {
+    border: 1px var(--text-color) solid;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.company-name {
+    align-self: start;
+
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--hovered-color);
+        }
+
+        transition: color 0.2s;
+    }
+}
+
+.company-role {
+    align-self: start;
+
+    margin-top: -0.5rem;
+    padding-bottom: 0.5rem;
+
+    h4 {
+        color: var(--secondary-color);
+        font-size: 15pt;
+    }
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-self: end;
+    justify-content: flex-start;
+}
+
+.tag {
+    border: 1px var(--text-color) solid;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    min-width: 100px;
+    height: 30px;
+    text-align: center;
+}
