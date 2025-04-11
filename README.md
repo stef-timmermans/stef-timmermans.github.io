@@ -12,7 +12,9 @@
 
 2. **About Me:** On this page, you'll find more information about me, my skills, and my hobbies outside of the industry.
 
-3. **Projects:** This page showcases some of the projects that I've worked on. Each project includes a brief description, the tech stack I used, and a link to the documentation, if applicable.
+3. **Resume:** Contains a Google Drive link to my up-to-date resume, along with a list of positions I've held in the tech industry.
+
+4. **Projects:** This page showcases some of the projects that I've worked on. Each project includes a brief description, the tech stack I used, and a link to the documentation, if applicable.
 
 <br>
 
