@@ -24,6 +24,10 @@ $half-cube-size: math.div($cube-size, 2);
     &.open {
         transform: translateX(0);
         transition: transform 0.5s ease;
+
+        .close-btn {
+            margin-right: 1.5rem;
+        }
     }
 
     .link {
@@ -75,6 +79,10 @@ $half-cube-size: math.div($cube-size, 2);
     .spinning-cube {
         padding-left: 1rem;
         z-index: 9999;
+
+        @media (max-width: 601px) {
+            margin-right: 1rem;
+        }
     }
 
     .hamburger-btn {
