@@ -62,7 +62,7 @@ $half-cube-size: math.div($cube-size, 2);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 710px) {
     .nav-links {
         position: fixed;
         top: 0;
@@ -81,7 +81,7 @@ $half-cube-size: math.div($cube-size, 2);
         padding-left: 1rem;
         z-index: 9999;
 
-        @media (max-width: 601px) {
+        @media (max-width: 710px) {
             margin-right: 1rem;
         }
     }
@@ -100,7 +100,7 @@ $half-cube-size: math.div($cube-size, 2);
     }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 710px) {
     .nav-links {
         position: relative;
         flex-direction: row;
@@ -161,8 +161,8 @@ $half-cube-size: math.div($cube-size, 2);
 }
 
 .spinning-cube {
-    // if screen is at least 601 pixels
-    @media (min-width: 601px) {
+    // if screen is at least 710 pixels
+    @media (min-width: 710px) {
         padding-right: 2rem;
     }
 
