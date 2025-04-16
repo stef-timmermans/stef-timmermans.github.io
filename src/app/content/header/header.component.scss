@@ -15,6 +15,7 @@ $half-cube-size: math.div($cube-size, 2);
 }
 
 .nav-links {
+    z-index: 999;
     padding-left: 1rem;
     display: flex;
     justify-content: center;
@@ -61,26 +62,26 @@ $half-cube-size: math.div($cube-size, 2);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 710px) {
     .nav-links {
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         height: 100%;
-        width: 100%;
-        transform: translateX(100%);
+        width: 65%;
+        transform: translateX(-100%);
         overflow: hidden;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         background: var(--hd-ft-color);
-        padding: 20px;
+        padding: 2rem;
     }
 
     .spinning-cube {
         padding-left: 1rem;
         z-index: 9999;
 
-        @media (max-width: 601px) {
+        @media (max-width: 710px) {
             margin-right: 1rem;
         }
     }
@@ -99,7 +100,7 @@ $half-cube-size: math.div($cube-size, 2);
     }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 710px) {
     .nav-links {
         position: relative;
         flex-direction: row;
@@ -160,8 +161,8 @@ $half-cube-size: math.div($cube-size, 2);
 }
 
 .spinning-cube {
-    // if screen is at least 601 pixels
-    @media (min-width: 601px) {
+    // if screen is at least 710 pixels
+    @media (min-width: 710px) {
         padding-right: 2rem;
     }
 
@@ -176,8 +177,8 @@ $half-cube-size: math.div($cube-size, 2);
 .close-btn {
     color: var(--hd-ft-text-color);
     position: absolute;
-    top: 1rem;
-    right: -0.5rem;
+    top: 1.5rem;
+    right: 0.15rem;
     background: none;
     border: none;
     font-size: $btn-font-size;
@@ -187,4 +188,16 @@ $half-cube-size: math.div($cube-size, 2);
     &:hover {
         color: var(--hovered-color);
     }
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
