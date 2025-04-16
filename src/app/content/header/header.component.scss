@@ -65,15 +65,15 @@ $half-cube-size: math.div($cube-size, 2);
     .nav-links {
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         height: 100%;
-        width: 100%;
-        transform: translateX(100%);
+        width: 65%;
+        transform: translateX(-100%);
         overflow: hidden;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         background: var(--hd-ft-color);
-        padding: 20px;
+        padding: 2rem;
     }
 
     .spinning-cube {
@@ -176,8 +176,8 @@ $half-cube-size: math.div($cube-size, 2);
 .close-btn {
     color: var(--hd-ft-text-color);
     position: absolute;
-    top: 1rem;
-    right: -0.5rem;
+    top: 1.5rem;
+    right: 0.15rem;
     background: none;
     border: none;
     font-size: $btn-font-size;
