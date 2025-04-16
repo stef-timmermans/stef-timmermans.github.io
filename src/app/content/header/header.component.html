@@ -28,5 +28,10 @@
     <div class="theme-switcher">
         <app-theme-switch></app-theme-switch>
     </div>
-
 </div>
+
+<div
+  class="nav-overlay"
+  *ngIf="isSidePanelOpen"
+  (click)="closeSidePanel()"
+></div>

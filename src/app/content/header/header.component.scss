@@ -15,6 +15,7 @@ $half-cube-size: math.div($cube-size, 2);
 }
 
 .nav-links {
+    z-index: 999;
     padding-left: 1rem;
     display: flex;
     justify-content: center;
@@ -187,4 +188,16 @@ $half-cube-size: math.div($cube-size, 2);
     &:hover {
         color: var(--hovered-color);
     }
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
