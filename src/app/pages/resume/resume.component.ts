@@ -24,7 +24,7 @@ export class ResumeComponent {
     {
       id: 0,
       name: 'Ocean Recap',
-      role: 'Junior Full Stack Software Developer',
+      role: 'Junior Full Stack Software Developer | Dec 2024 — Present',
 
       description:
         `
