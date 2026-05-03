@@ -1,9 +1,17 @@
 .company-container {
-    border: 1px var(--text-color) solid;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border: 1px solid var(--hd-ft-color);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
     gap: 10px;
+    background-color: var(--bg-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.company-container:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
 }
 
 .company-name {
@@ -12,25 +20,29 @@
     a {
         color: var(--text-color);
         text-decoration: none;
+        transition: color 0.2s ease;
 
         &:hover {
             color: var(--hovered-color);
         }
-
-        transition: color 0.2s;
     }
 }
 
 .company-role {
     align-self: start;
-
-    margin-top: -0.5rem;
+    margin-top: -0.25rem;
     padding-bottom: 0.5rem;
 
     h4 {
         color: var(--secondary-color);
-        font-size: 15pt;
+        font-size: 0.95rem;
+        font-weight: 500;
     }
+}
+
+.company-description {
+  color: var(--text-color);
+  line-height: 1.5;
 }
 
 .tag-list {
@@ -42,9 +54,9 @@
 }
 
 .tag {
-    border: 1px var(--text-color) solid;
-    border-radius: 10px;
-    padding: 5px;
+    border: 1px solid var(--hd-ft-color);
+    border-radius: 999px;
+    padding: 6px 12px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -52,4 +64,6 @@
     min-width: 100px;
     height: 30px;
     text-align: center;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
 }
