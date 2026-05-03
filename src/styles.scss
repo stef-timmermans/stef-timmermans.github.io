@@ -8,7 +8,7 @@
   --secondary-color: #5a5a5a; /* Mid gray for secondary text */
   --primary-color: #1e88e5; /* Primary color */
   --accent-color: #ff4081; /* Accent color */
-  --hovered-color: #1e88e5; /* Blue for hovered links */
+  --hovered-color: #b0b0b0; /* Lighter color for hovered links */
 }
 
 .dark {
@@ -54,10 +54,10 @@ html {
 
 /* Set styles for the text throughout the app */
 html,
-body { 
+body {
   height: 100%;
 }
-body { 
+body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
