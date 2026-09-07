@@ -12,10 +12,25 @@ describe('ProjectComponent', () => {
     });
     fixture = TestBed.createComponent(ProjectComponent);
     component = fixture.componentInstance;
+    component.project = {
+      name: 'Research project',
+      description: 'A project without a preview image.',
+      tags: ['Python'],
+      repository: 'https://github.com/example/research'
+    };
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('renders projects without requesting an undefined image', () => {
+    expect(fixture.nativeElement.querySelector('img')).toBeNull();
+    expect(fixture.nativeElement.querySelector('h2').textContent).toContain('Research project');
+  });
+
+  it('renders an optional preview with an accessible description', () => {
+    component.project = { ...component.project, image: 'assets/cuttlefish.png' };
+    fixture.detectChanges();
+    const image = fixture.nativeElement.querySelector('img');
+    expect(image.getAttribute('src')).toBe('assets/cuttlefish.png');
+    expect(image.getAttribute('alt')).toContain('Research project');
   });
 });

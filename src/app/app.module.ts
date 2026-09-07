@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,8 +15,6 @@ import { ThemeService } from './services/theme/theme.service';
 
 import { ThemeSwitchComponent } from './elements/theme-switch/theme-switch.component';
 import { ProjectComponent } from './elements/project/project.component';
-import { ResumeComponent } from './pages/resume/resume.component';
-import { CompanyComponent } from './elements/company/company.component';
 
 @NgModule({
   declarations: [
@@ -31,16 +26,11 @@ import { CompanyComponent } from './elements/company/company.component';
     HeaderComponent,
     FooterComponent,
     ThemeSwitchComponent,
-    ProjectComponent,
-    ResumeComponent,
-    CompanyComponent
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTooltipModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [
     ThemeService,

@@ -1,19 +1,10 @@
 <div class="projects-page-content">
-    <h1>Projects</h1>
-    <h4>A list of my projects and the technologies used in their development.</h4>
-
-    <div class="projects-list">
-        <!-- Pass project data to each project component -->
-        <div *ngFor="let projectParams of projects">
-            <app-project
-                [id]="projectParams.id"
-                [name]="projectParams.name"
-                [description]="projectParams.description"
-                [tags]="projectParams.tags"
-                [repository]="projectParams.repository"
-                [image]="projectParams.image">
-            </app-project>
-        </div>
-
-    </div>
+  <h1>Projects</h1>
+  <p class="page-subtitle">Selected work in AI research, software engineering, and full-stack development.</p>
+  <div class="projects-list">
+    <app-project
+      *ngFor="let project of projects; trackBy: trackProject"
+      [project]="project">
+    </app-project>
+  </div>
 </div>

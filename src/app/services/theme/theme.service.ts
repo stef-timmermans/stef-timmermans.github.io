@@ -1,59 +1,41 @@
-/*
-* Folder: src/app/services/theme
-* Component: theme
-*     The theme service is used to manage the theme of the
-*   website. It is used to set the theme, toggle the theme,
-*   and get the current theme. The theme is stored in local
-*   storage so that it persists between page loads.
-*/
-
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ThemeService {
-  private readonly THEME_KEY = 'theme';
-  private readonly DARK_THEME = 'dark';
-  private readonly LIGHT_THEME = 'light';
+type Theme = 'light' | 'dark';
 
-  constructor() { 
-    this.setTheme(this.getTheme());
+@Injectable({ providedIn: 'root' })
+export class ThemeService {
+  private readonly themeKey = 'theme';
+  private theme: Theme = 'light';
+
+  constructor() {
+    try {
+      this.theme = localStorage.getItem(this.themeKey) === 'dark' ? 'dark' : 'light';
+    } catch {
+      // Keep the default when browser storage is unavailable.
+    }
+    this.applyTheme();
   }
 
-  setTheme(theme: string): void {
-    // first, remove the old theme class if any
-    const currentTheme = this.getTheme();
-    if (currentTheme) {
-        document.body.classList.remove(currentTheme);
-    }
-    
-    // add the new theme class
-    document.body.classList.add(theme);
-
-    // update theme in local storage
+  setTheme(theme: Theme): void {
+    this.theme = theme;
+    this.applyTheme();
     try {
-        localStorage.setItem(this.THEME_KEY, theme);
-    } catch (e) {
-        console.error('Unable to save theme in Local Storage: ', e);
+      localStorage.setItem(this.themeKey, theme);
+    } catch {
+      // Switching still works for this visit without persistent storage.
     }
   }
 
   toggleTheme(): void {
-    if (this.getTheme() === this.DARK_THEME) {
-      this.setTheme(this.LIGHT_THEME);
-    } else {
-      this.setTheme(this.DARK_THEME);
-    }
+    this.setTheme(this.theme === 'dark' ? 'light' : 'dark');
   }
 
-  getTheme(): string {
-    let theme = this.LIGHT_THEME;
-    try {
-        theme = localStorage.getItem(this.THEME_KEY) || this.LIGHT_THEME;
-    } catch (e) {
-        console.error('Unable to get theme from Local Storage: ', e);
-    }
-    return theme;
+  getTheme(): Theme {
+    return this.theme;
+  }
+
+  private applyTheme(): void {
+    document.body.classList.remove('light', 'dark');
+    document.body.classList.add(this.theme);
   }
 }

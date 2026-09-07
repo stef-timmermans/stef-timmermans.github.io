@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { HeaderComponent } from './header.component';
 import { ThemeSwitchComponent } from '../../elements/theme-switch/theme-switch.component';
 import { ThemeService } from '../../services/theme/theme.service';
@@ -9,6 +10,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [HeaderComponent, ThemeSwitchComponent],
       providers: [ThemeService]
     });

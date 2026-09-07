@@ -12,9 +12,7 @@
 
 2. **About Me:** On this page, you'll find more information about me, my skills, and my hobbies outside of the industry.
 
-3. **Resume:** Contains a Google Drive link to my up-to-date resume, along with a list of positions I've held in the tech industry.
-
-4. **Projects:** This page showcases some of the projects that I've worked on. Each project includes a brief description, the tech stack I used, and a link to the documentation, if applicable.
+3. **Projects:** This page showcases some of the projects that I've worked on. Each project includes a brief description, the tech stack I used, and a link to the documentation, if applicable.
 
 <br>
 
@@ -30,7 +28,7 @@ To run this project locally:
 
 1. Clone the repository: `git clone https://github.com/stef-timmermans/stef-timmermans.github.io.git`
 2. Install dependencies: `npm install`
-3. Start the server: `ng serve`
+3. Start the server: `npm start`
 4. Open a browser and navigate to `http://localhost:4200/`
 
 <br>
@@ -38,3 +36,13 @@ To run this project locally:
 # License Information
 
 This project is licensed under the MIT license. It is partially built using free and open-source software. For more information see `LICENSE` and `NOTICE` in the root directory.
+
+## Maintaining the site
+
+Project content and display order live in `src/app/pages/projects/projects.data.ts`.
+Preview images are optional; projects without one use a text-only card.
+Keep Database Banking Project and Portfolio Website as the final two entries.
+
+Run `npm test -- --watch=false --browsers=Chrome` for the test suite.
+Run `npm run build` to regenerate the GitHub Pages output in `docs/`.
+The old `#/resume` URL redirects to About Me.

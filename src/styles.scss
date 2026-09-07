@@ -1,63 +1,73 @@
-/* Assign the colors for light and dark mode themes */
 :root {
-  --bg-color: #fafafa; /* Soft white */
-  --hd-ft-color: #d6d6d6; /* Very light gray */
-  --hd-ft-text-color: #000000; /* Pure black text */
-  --text-color: #333333; /* Dark gray */
-  --cube-color: #333333; /* Dark gray cube */
-  --secondary-color: #5a5a5a; /* Mid gray for secondary text */
-  --primary-color: #1e88e5; /* Primary color */
-  --accent-color: #ff4081; /* Accent color */
-  --hovered-color: #b0b0b0; /* Lighter color for hovered links */
+  --bg-color: #f8fafc;
+  --hd-ft-color: #ffffff;
+  --hd-ft-text-color: #172536;
+  --text-color: #172536;
+  --cube-color: #243b53;
+  --secondary-color: #526376;
+  --primary-color: #1768ac;
+  --hovered-color: #1768ac;
+  --surface-color: #ffffff;
+  --border-color: #dce4ec;
+  --tag-color: #edf3f8;
 }
-
 .dark {
-  --bg-color: #1e1e1e; /* Darker gray */
-  --hd-ft-color: #525252; /* Light gray */
-  --hd-ft-text-color: #eeeeee; /* Soft white */
-  --text-color: #eeeeee; /* Soft white */
-  --cube-color: #eeeeee; /* White cube */
-  --secondary-color: #c6c6c6; /* Lighter gray for secondary text in dark mode */
-  --primary-color: #90caf9; /* Primary color */
-  --accent-color: #ff80ab; /* Accent color */
-  --hovered-color: #787878; /* Gray for hovered links */
+  --bg-color: #141c26;
+  --hd-ft-color: #192430;
+  --hd-ft-text-color: #edf3fa;
+  --text-color: #edf3fa;
+  --cube-color: #b9d7ee;
+  --secondary-color: #afbfce;
+  --primary-color: #8ac8fa;
+  --hovered-color: #8ac8fa;
+  --surface-color: #1c2835;
+  --border-color: #344556;
+  --tag-color: #283a4b;
 }
-
-body {
-  background-color: var(--bg-color); /* Set the body background color */
-  color: var(--text-color); /* Set the body text color */
-  font-family: 'Roboto', sans-serif; /* Set the font family */
-}
-
-app-header,
-app-footer {
-  background-color: var(--primary-color); /* Set the header and footer background color */
-  color: var(--bg-color); /* Set the header and footer text color */
-}
-
-/* Set styles for the scrollbar */
-::-webkit-scrollbar {
-  width: 0.70rem;
-}
-::-webkit-scrollbar-track {
-  background: var(--hd-ft-color);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--text-color);
-}
-
-/* Set styles for the scrollbar in Firefox */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--text-color) var(--hd-ft-color);
-}
-
-/* Set styles for the text throughout the app */
-html,
-body {
+html, body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  margin-bottom: 0.625rem;
+}
+h2 {
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.page-subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+a, button {
+  touch-action: manipulation;
+}
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

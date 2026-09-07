@@ -1,29 +1,19 @@
-<div class="project-container">
-    <div class="name-and-description">
-        <!-- Displays the project name as a hyperlink to the repository -->
-        <div class="project-name">
-            <h3>
-                <a [href]="repository" target="_blank">{{ name }}
-                    <i class="bi bi-box-arrow-up-right"></i>
-                </a>
-            </h3>
-        </div>
-
-        <!-- Displays the project description -->
-        <div class="project-description">
-            <p>{{ description }}</p>
-        </div>
-    </div>
-
-    <!-- Displays the project tags -->
-    <div class="tag-list">
-        <div class="tag" *ngFor="let tag of tags">
-            {{ tag }}
-        </div>
-    </div>
-
-    <!-- Displays the project image -->
-    <div class="project-image">
-        <img [src]="image" alt="Image of {{ name }}">
-    </div>
-</div>
+<article class="project-container" [class.without-image]="!project.image">
+  <div class="name-and-description">
+    <h2 class="project-name">
+      <a [href]="project.repository" target="_blank" rel="noopener noreferrer">
+        {{ project.name }}
+        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+      </a>
+    </h2>
+    <p *ngIf="project.period" class="project-period">{{ project.period }}</p>
+    <p class="project-description">{{ project.description }}</p>
+    <p *ngIf="project.note" class="project-note">{{ project.note }}</p>
+  </div>
+  <ul class="tag-list" aria-label="Technologies" role="list">
+    <li class="tag" *ngFor="let tag of project.tags">{{ tag }}</li>
+  </ul>
+  <div *ngIf="project.image" class="project-image">
+    <img [src]="project.image" [alt]="'Screenshot of ' + project.name" loading="lazy">
+  </div>
+</article>

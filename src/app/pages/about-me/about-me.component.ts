@@ -1,9 +1,3 @@
-/*
-* Folder: src/app/pages/about-me
-* Component: about-me
-*     This page is used to display information about me.
-*/
-
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
@@ -15,6 +9,6 @@ import { Title } from '@angular/platform-browser';
 export class AboutMeComponent {
 
   constructor(private titleService: Title ) {
-    this.titleService.setTitle('About Me');
+    this.titleService.setTitle('About Me | Stef Timmermans');
   }
 }

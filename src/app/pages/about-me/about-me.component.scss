@@ -1,34 +1,21 @@
 .about-me-content {
-    padding-left: 2rem;
-    padding-top: 2rem;
-    padding-right: 2rem;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 1rem;
-    align-items: flex-start;
-
-    .main-subtitle {
-        padding-bottom: 1rem;
-    }
-
-    padding-bottom: 4rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
 }
-
-.link {
-    color: var(--text-color);
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    &:hover {
-      color: var(--hovered-color);
-    }
-    
-    transition: color 0.2s;
+.main-subtitle {
+  margin-bottom: 2rem;
+}
+p, li {
+  color: var(--secondary-color);
+}
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+li {
+  margin-bottom: .65rem;
+}
+strong {
+  color: var(--text-color);
 }

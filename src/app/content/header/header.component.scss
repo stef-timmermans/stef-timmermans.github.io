@@ -1,117 +1,108 @@
 @use 'sass:math';
 
-$header-padding: 1.5rem;
-$btn-font-size: 2rem;
 $cube-size: 40px;
 $half-cube-size: math.div($cube-size, 2);
 
 .header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem max(1.5rem, calc((100% - 1112px) / 2));
+  border-bottom: 1px solid var(--border-color);
+  background: var(--hd-ft-color);
+}
+
+.spinning-cube {
+  flex: 0 0 80px;
+
+  a {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: $header-padding 10% $header-padding 2%;
-    padding-right: $header-padding;
-    background-color: var(--hd-ft-color);
+    justify-content: center;
+    min-height: 48px;
+    transform: translateX(-6px);
+  }
 }
 
 .nav-links {
-    z-index: 999;
-    padding-left: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    transition: transform 0s ease;
+  display: flex;
+  gap: 1.75rem;
 
-    &.open {
-        transform: translateX(0);
-        transition: transform 0.5s ease;
+  .link {
+    color: var(--hd-ft-text-color);
+    text-decoration: none;
+    font-weight: 400;
+    padding: .5rem 0;
 
-        .close-btn {
-            margin-right: 1.5rem;
-        }
+    &:hover {
+      color: var(--hovered-color);
     }
-
-    .link {
-        color: var(--hd-ft-text-color);
-        text-decoration: none;
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        position: relative;
-        transition: color 0.2s;
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 0.085rem;
-            background-color: var(--hd-ft-text-color);
-            transition: background-color 0.2s;
-        }
-
-        &:hover {
-            color: var(--hovered-color);
-
-            &::after {
-                background-color: var(--hovered-color);
-            }
-        }
+    &.active {
+      font-weight: 500;
     }
+  }
+}
+
+.theme-switcher {
+  margin-left: auto;
+}
+.hamburger-btn, .close-btn {
+  color: var(--hd-ft-text-color);
+  background: transparent;
+  border: 0;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.75rem;
+}
+.hamburger-btn {
+  display: none;
+}
+.close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+.nav-overlay {
+  display: none;
 }
 
 @media (max-width: 710px) {
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 65%;
-        transform: translateX(-100%);
-        overflow: hidden;
-        flex-direction: column;
-        gap: 1.5rem;
-        background: var(--hd-ft-color);
-        padding: 2rem;
+  .header-content {
+    padding: 1rem;
+    gap: .5rem;
+  }
+  .spinning-cube {
+    flex-basis: 72px;
+  }
+  .hamburger-btn {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 999;
+    width: min(80vw, 320px);
+    padding: 5rem 2rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    background: var(--hd-ft-color);
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    &.open {
+      visibility: visible;
+      transform: translateX(0);
+      transition: transform .2s ease;
     }
-
-    .spinning-cube {
-        padding-left: 1rem;
-        z-index: 9999;
-
-        @media (max-width: 710px) {
-            margin-right: 1rem;
-        }
-    }
-
-    .hamburger-btn {
-        color: var(--hd-ft-text-color);
-        display: inline;
-        border: none;
-        background: transparent;
-        font-size: $btn-font-size;
-        transition: color 0.2s;
-
-        &:hover {
-            color: var(--hovered-color);
-        }
-    }
-}
-
-@media (min-width: 710px) {
-    .nav-links {
-        position: relative;
-        flex-direction: row;
-        height: auto;
-        width: auto;
-        transform: none;
-    }
-
-    .hamburger-btn {
-        display: none;
-    }
+  }
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, .5);
+  }
 }
 
 .cube {
@@ -127,8 +118,6 @@ $half-cube-size: math.div($cube-size, 2);
     width: $cube-size;
     height: $cube-size;
     background: var(--cube-color);
-    border:0px solid black;
-    box-shadow: 0 0 0px rgba(0,0,0,0.3);
 }
 
 .front {
@@ -156,48 +145,10 @@ $half-cube-size: math.div($cube-size, 2);
 }
 
 @keyframes spin {
-    0% { transform: rotateX(-45deg) rotateY(0deg); }
-    100% { transform: rotateX(-45deg) rotateY(1turn); }
-}
-
-.spinning-cube {
-    // if screen is at least 710 pixels
-    @media (min-width: 710px) {
-        padding-right: 2rem;
+    0% {
+      transform: rotateX(-45deg) rotateY(0deg);
     }
-
-    // set layer to be below the side-panel on mobile
-    z-index: 0;
-}
-
-.theme-switcher {
-    margin-left: auto;
-}
-
-.close-btn {
-    color: var(--hd-ft-text-color);
-    position: absolute;
-    top: 1.5rem;
-    right: 0.15rem;
-    background: none;
-    border: none;
-    font-size: $btn-font-size;
-    cursor: pointer;
-    transition: color 0.2s;
-
-    &:hover {
-        color: var(--hovered-color);
+    100% {
+      transform: rotateX(-45deg) rotateY(1turn);
     }
-}
-
-.nav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 998;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  transition: opacity 0.3s ease;
 }
