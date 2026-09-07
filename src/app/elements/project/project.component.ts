@@ -1,14 +1,5 @@
-/*
-* Folder: src/app/elements/project
-* Component: project
-*     This component is used to display a project. It is
-*   called by the project component's HTML and is passed
-*   the project's information. These fields are the project's
-*   ID number, name, description, tags, repository link, and
-*   image location.
-*/
-
 import { Component, Input } from '@angular/core';
+import { Project } from './project.model';
 
 @Component({
   selector: 'app-project',
@@ -16,12 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent {
-
-  @Input() id!: number;
-  @Input() name!: string;
-  @Input() description!: string;
-  @Input() tags!: string[];
-  @Input() repository!: string;
-  @Input() image!: string;
-
+  @Input({ required: true }) project!: Project;
 }

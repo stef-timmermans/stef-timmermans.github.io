@@ -1,6 +1,6 @@
 <div class="header-content">
     <div class="spinning-cube">
-        <a routerLink="/"
+        <a routerLink="/" aria-label="Home"
         (click)="closeSidePanel()">
             <div class="cube">
                 <div class="face front"></div>
@@ -9,19 +9,18 @@
                 <div class="face left"></div>
                 <div class="face top"></div>
                 <div class="face bottom"></div>
-            </div>            
+            </div>
         </a>
-    </div>    
-
-    <div class="nav-links" [class.open]="isSidePanelOpen">
-        <a routerLink="/" class="link" (click)="closeSidePanel()">Home</a>
-        <a routerLink="/about-me" class="link" (click)="closeSidePanel()">About Me</a>
-        <a routerLink="/resume" class="link" (click)="closeSidePanel()">Resume</a>
-        <a routerLink="/projects" class="link" (click)="closeSidePanel()">Projects</a>
-        <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn">X</button>
     </div>
 
-    <button (click)="toggleSidePanel()" class="hamburger-btn">
+    <nav id="main-navigation" aria-label="Main navigation" class="nav-links" [class.open]="isSidePanelOpen">
+        <a routerLink="/" class="link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page" (click)="closeSidePanel()">Home</a>
+        <a routerLink="/about-me" class="link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page" (click)="closeSidePanel()">About Me</a>
+        <a routerLink="/projects" class="link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page" (click)="closeSidePanel()">Projects</a>
+        <button *ngIf="isSidePanelOpen" (click)="toggleSidePanel()" class="close-btn" aria-label="Close menu">×</button>
+    </nav>
+
+    <button (click)="toggleSidePanel()" class="hamburger-btn" aria-label="Toggle menu" aria-controls="main-navigation" [attr.aria-expanded]="isSidePanelOpen">
         <i class="bi bi-list"></i>
     </button>
 

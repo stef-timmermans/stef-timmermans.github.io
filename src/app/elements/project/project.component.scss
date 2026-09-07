@@ -1,91 +1,89 @@
-// create grid for individual project
 .project-container {
-    display: grid;
-    grid-template-areas:
-      'name-and-description image'
-      'name-and-description image'
-      'tags image';
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
-    border: 1px var(--text-color) solid;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    gap: 10px;
+  display: grid;
+  grid-template-areas: 'name-and-description image' 'tags image';
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  gap: 1.25rem 2rem;
+  background: var(--surface-color);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .025);
 }
-
-// project grid for mobile
-@media (max-width: 710px) {
-    .project-container {
-        grid-template-areas:
-            'name-and-description'
-            'image'
-            'tags';
-        grid-template-columns: 1fr;
-    }
-
-    .project-image {
-        margin-top: -0.5rem;
-        margin-bottom: 0.5rem;
-    }
-}  
-
-.project-name {
-    grid-area: name;
-    align-self: start;
-
-    a {
-        color: var(--text-color);
-        text-decoration: none;
-
-        &:hover {
-            color: var(--hovered-color);
-        }
-
-        transition: color 0.2s;
-    }
-
-    padding-bottom: 0.5rem;
+.name-and-description {
+  grid-area: name-and-description;
+  min-width: 0;
 }
-
+.project-name a { color: var(--text-color); text-decoration: none; &:hover { color: var(--hovered-color); } }
+.project-name i {
+  font-size: .8em;
+  margin-left: .25rem;
+}
 .project-description {
-    grid-area: description;
+  color: var(--secondary-color);
 }
-
+.project-description {
+  margin-bottom: 0;
+}
 .tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    grid-area: tags;
-    align-self: end;
-    justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  grid-area: tags;
+  align-self: end;
 }
-
 .tag {
-    border: 1px var(--text-color) solid;
-    border-radius: 10px;
-    padding: 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    min-width: 100px;
-    height: 30px;
-    text-align: center;
+  background: var(--tag-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  padding: .3rem .65rem;
+  font-size: .8rem;
+  line-height: 1.5;
 }
-
 .project-image {
-    grid-area: image;
-    display: flex;     
-    align-items: center;
-    justify-content: center;
-    border: 1px var(--text-color) solid;
-    border-radius: 5px;
+  grid-area: image;
+  align-self: center;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 710px) {
+  .project-container {
+    grid-template-areas: 'name-and-description' 'image' 'tags';
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.25rem;
+    gap: 1rem;
+  }
 }
 
-.project-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 5px;
+:host {
+  display: block;
+}
+.project-name {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+.project-period, .project-note {
+  color: var(--secondary-color);
+  font-size: .9rem;
+}
+.project-note {
+  margin: 1rem 0 0;
+}
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.without-image {
+  grid-template-areas: 'name-and-description' 'tags';
+  grid-template-columns: minmax(0, 1fr);
+}
+.without-image .name-and-description {
+  max-width: 80ch;
 }

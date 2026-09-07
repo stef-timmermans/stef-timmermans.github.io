@@ -1,59 +1,78 @@
 .home-content {
-  background-color: var(--bg-color);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
+}
+h1 {
+  max-width: 850px;
+}
+.home-name {
   color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  align-items: flex-start;
+  font-weight: 500;
+  font-size: 1.35rem;
 }
-
+.description-1, .description-2 {
+  max-width: 42rem;
+  color: var(--secondary-color);
+  font-size: 1.075rem;
+}
 .description-1 {
-  padding-top: 1rem;
-  margin-bottom: 1rem;
-
-  // if screen is at least 710 pixels
-  @media (min-width: 710px) {
-    max-width: 50%;
-  }
-
-  // if screen is at least 1201 pixels
-  @media (min-width: 1201px) {
-    max-width: 25% !important;
-  }
+  margin-top: 2rem;
 }
-
 .description-2 {
-  margin-bottom: 3rem;
-
-  // if screen is at least 710 pixels
-  @media (min-width: 710px) {
-    max-width: 50%;
-  }
-
-  // if screen is at least 1201 pixels
-  @media (min-width: 1201px) {
-    max-width: 25% !important;
-  }
+  margin-bottom: 2rem;
 }
-
 .links {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.link {
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .6rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--surface-color);
+  transition: color .2s, border-color .2s;
+  &:hover {
+    color: var(--hovered-color);
+    border-color: var(--primary-color);
+  }
+}
 
-  .link {
-    color: var(--text-color);
-    text-decoration: none;
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  max-width: 42rem;
+  font-size: 1.075rem;
+
+  li {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    align-items: flex-start;
+    gap: .85rem;
+    margin-bottom: 1.25rem;
+  }
 
-    &:hover {
-      color: var(--hovered-color);
-    }
-    
-    transition: color 0.2s;
+  .bi {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+  }
+
+  .degree {
+    display: block;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+
+  .university {
+    display: block;
+    color: var(--secondary-color);
   }
 }

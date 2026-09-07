@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectsComponent } from './projects.component';
-import { ProjectComponent } from '../../elements/project/project.component'
+import { ProjectComponent } from '../../elements/project/project.component';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -16,7 +16,10 @@ describe('ProjectsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('keeps the banking project and portfolio after the research and capstone', () => {
+    const headings = Array.from(fixture.nativeElement.querySelectorAll('h2'))
+      .map((heading: any) => heading.textContent.trim());
+    expect(headings.length).toBe(5);
+    expect(headings.slice(-2)).toEqual(['Database Banking Project', 'Portfolio Website']);
   });
 });
